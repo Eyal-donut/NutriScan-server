@@ -89,4 +89,4 @@ export const deleteUsers = asyncHandler(async (req, res, next) => {
   });
 });
 
-export { getUser, getUsers, deleteUser, deleteUsers };
+export { getUser, getUsers, updateUser, deleteUser, deleteUsers };
