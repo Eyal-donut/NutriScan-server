@@ -1,0 +1,194 @@
+[
+  {
+    "name": "John Smith",
+    "email": "john.smith@example.com",
+    "password": "password123",
+    "dietPreferences": {
+      "Gluten free": true,
+      "Lactose free": false,
+      "Vegan": true,
+      "Vegetarian": false
+    },
+    "environmentPreferences": {
+      "silicone & Siloxane": false,
+      "Microplastic": true,
+      "Palm oil": false
+    },
+    "nutritionPreferences": {
+      "Fat": "Moderate",
+      "Saturated fat": "Low",
+      "Cholesterol": "Off",
+      "Carbohydrates": "Moderate",
+      "Sugar": "Low",
+      "Salt": "Zero"
+    }
+  },
+  {
+    "name": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "password": "password123",
+    "dietPreferences": {
+      "Gluten free": false,
+      "Lactose free": true,
+      "Vegan": false,
+      "Vegetarian": true
+    },
+    "environmentPreferences": {
+      "silicone & Siloxane": false,
+      "Microplastic": true,
+      "Palm oil": true
+    },
+    "nutritionPreferences": {
+      "Fat": "Low",
+      "Saturated fat": "Low",
+      "Cholesterol": "Off",
+      "Carbohydrates": "Moderate",
+      "Sugar": "Low",
+      "Salt": "Low"
+    }
+  },
+  {
+    "name": "William Johnson",
+    "email": "william.johnson@example.com",
+    "password": "password123",
+    "dietPreferences": {
+      "Gluten free": false,
+      "Lactose free": false,
+      "Vegan": false,
+      "Vegetarian": true
+    },
+    "environmentPreferences": {
+      "silicone & Siloxane": true,
+      "Microplastic": false,
+      "Palm oil": false
+    },
+    "nutritionPreferences": {
+      "Fat": "Off",
+      "Saturated fat": "Off",
+      "Cholesterol": "Low",
+      "Carbohydrates": "Off",
+      "Sugar": "Off",
+      "Salt": "Off"
+    }
+  },
+  {
+    "name": "Elizabeth Brown",
+    "email": "elizabeth.brown@example.com",
+    "password": "password123",
+    "dietPreferences": {
+      "Gluten free": true,
+      "Lactose free": true,
+      "Vegan": false,
+      "Vegetarian": false
+    },
+    "environmentPreferences": {
+      "silicone & Siloxane": true,
+      "Microplastic": false,
+      "Palm oil": true
+    },
+    "nutritionPreferences": {
+      "Fat": "Low",
+      "Saturated fat": "Low",
+      "Cholesterol": "Off",
+      "Carbohydrates": "Low",
+      "Sugar": "Low",
+      "Salt": "Low"
+    }
+  },
+  {
+    "name": "Michael Rodriguez",
+    "email": "michael.rodriguez@example.com",
+    "password": "password123",
+    "dietPreferences": {
+      "Gluten free": false,
+      "Lactose free": true,
+      "Vegan": false,
+      "Vegetarian": false
+    },
+    "environmentPreferences": {
+      "silicone & Siloxane": true,
+      "Microplastic": true,
+      "Palm oil": false
+    },
+    "nutritionPreferences": {
+      "Fat": "Moderate",
+      "Saturated fat": "Moderate",
+      "Cholesterol": "Moderate",
+      "Carbohydrates": "Low",
+      "Sugar": "Low",
+      "Salt": "Off"
+    }
+  },
+  {
+    "name": "Emily Davis",
+    "email": "emily.davis@example.com",
+    "password": "password123",
+    "dietPreferences": {
+      "Gluten free": false,
+      "Lactose free": false,
+      "Vegan": false,
+      "Vegetarian": true
+    },
+    "environmentPreferences": {
+      "silicone & Siloxane": true,
+      "Microplastic": false,
+      "Palm oil": true
+    },
+    "nutritionPreferences": {
+      "Fat": "Low",
+      "Saturated fat": "Low",
+      "Cholesterol": "Off",
+      "Carbohydrates": "Low",
+      "Sugar": "Low",
+      "Salt": "Off"
+    }
+  },
+  {
+    "name": "Daniel Wilson",
+    "email": "daniel.wilson@example.com",
+    "password": "password123",
+    "dietPreferences": {
+      "Gluten free": false,
+      "Lactose free": false,
+      "Vegan": true,
+      "Vegetarian": false
+    },
+    "environmentPreferences": {
+      "silicone & Siloxane": true,
+      "Microplastic": false,
+      "Palm oil": false
+    },
+    "nutritionPreferences": {
+      "Fat": "Moderate",
+      "Saturated fat": "Low",
+      "Cholesterol": "Off",
+      "Carbohydrates": "Moderate",
+      "Sugar": "Low",
+      "Salt": "Off"
+    }
+  },
+  {
+    "name": "Sarah Thompson",
+    "email": "sarah.thompson@example.com",
+    "password": "password123",
+    "dietPreferences": {
+      "Gluten free": true,
+      "Lactose free": false,
+      "Vegan": true,
+      "Vegetarian": false
+    },
+    "environmentPreferences": {
+      "silicone & Siloxane": true,
+      "Microplastic": true,
+      "Palm oil": true
+    },
+    "nutritionPreferences": {
+      "Fat": "Low",
+      "Saturated fat": "Low",
+      "Cholesterol": "Off",
+      "Carbohydrates": "Low",
+      "Sugar": "Low",
+      "Salt": "Low"
+    }
+  }
+]

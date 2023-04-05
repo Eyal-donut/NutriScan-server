@@ -29,76 +29,70 @@ const UserSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
-    dietPreferences: [
-      {
-        "Gluten free": {
-          type: Boolean,
-          default: false,
-        },
-        "Lactose free": {
-          type: Boolean,
-          default: false,
-        },
-        Vegan: {
-          type: Boolean,
-          default: false,
-        },
-        Vegetarian: {
-          type: Boolean,
-          default: false,
-        },
+    dietPreferences: {
+      "Gluten free": {
+        type: Boolean,
+        default: false,
       },
-    ],
-    environmentPreferences: [
-      {
-        "Silicone & Siloxane": {
-          type: Boolean,
-          default: false,
-        },
-        Microplastic: {
-          type: Boolean,
-          default: false,
-        },
-        "Palm oil": {
-          type: Boolean,
-          default: false,
-        },
+      "Lactose free": {
+        type: Boolean,
+        default: false,
       },
-    ],
-    nutritionPreferences: [
-      {
-        Fat: {
-          type: String,
-          enum: ["Off", "Zero", "Low", "Moderate"],
-          default: "Off",
-        },
-        "Saturated Fat": {
-          type: String,
-          enum: ["Off", "Zero", "Low", "Moderate"],
-          default: "Off",
-        },
-        Cholesterol: {
-          type: String,
-          enum: ["Off", "Zero", "Low", "Moderate"],
-          default: "Off",
-        },
-        Carbohydrates: {
-          type: String,
-          enum: ["Off", "Zero", "Low", "Moderate"],
-          default: "Off",
-        },
-        Sugar: {
-          type: String,
-          enum: ["Off", "Zero", "Low", "Moderate"],
-          default: "Off",
-        },
-        Salt: {
-          type: String,
-          enum: ["Off", "Zero", "Low", "Moderate"],
-          default: "Off",
-        },
+      Vegan: {
+        type: Boolean,
+        default: false,
       },
-    ],
+      Vegetarian: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    environmentPreferences: {
+      "silicone & Siloxane": {
+        type: Boolean,
+        default: false,
+      },
+      Microplastic: {
+        type: Boolean,
+        default: false,
+      },
+      "Palm oil": {
+        type: Boolean,
+        default: false,
+      },
+    },
+    nutritionPreferences: {
+      Fat: {
+        type: String,
+        enum: ["Off", "Zero", "Low", "Moderate"],
+        default: "Off",
+      },
+      "Saturated fat": {
+        type: String,
+        enum: ["Off", "Zero", "Low", "Moderate"],
+        default: "Off",
+      },
+      Cholesterol: {
+        type: String,
+        enum: ["Off", "Zero", "Low", "Moderate"],
+        default: "Off",
+      },
+      Carbohydrates: {
+        type: String,
+        enum: ["Off", "Zero", "Low", "Moderate"],
+        default: "Off",
+      },
+      Sugar: {
+        type: String,
+        enum: ["Off", "Zero", "Low", "Moderate"],
+        default: "Off",
+      },
+      Salt: {
+        type: String,
+        enum: ["Off", "Zero", "Low", "Moderate"],
+        default: "Off",
+      },
+    },
   },
   {
     toJSON: {

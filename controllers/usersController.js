@@ -6,8 +6,13 @@ import User from "../models/User.js";
 // @access  Public
 export const getUsers = asyncHandler(async (req, res, next) => {
   const { email } = req.body;
+  const filter = {};
 
-  const users = await User.find({ email });
+  if (email !== undefined) {
+    filter.email = email;
+  }
+
+  const users = await User.find(filter);
 
   if (!users || users.length === 0) {
     return next(new Error("No users found."));
@@ -36,31 +41,29 @@ export const getUser = asyncHandler(async (req, res, next) => {
 // @route   POST /api/v1/products-scanner/users
 // @access  Public
 export const createUser = asyncHandler(async (req, res, next) => {
-    const user = await User.create(req.body);
-  if (!user){
-    return next(new Error("Error, user not created!"))
+  const user = await User.create(req.body);
+  if (!user) {
+    return next(new Error("Error, user not created!"));
   }
-    res.status(200).json({
-      success: true,
-      data: user,
-    });
+  res.status(200).json({
+    success: true,
+    data: user,
   });
-  
+});
 
 // @desc    Create many Users
 // @route   POST /api/v1/products-scanner/users/many
 //! @access  Development only
 export const createUsers = asyncHandler(async (req, res, next) => {
-    const usersArray = await User.createMany(req.body);
-  if (!usersArray){
-    return next(new Error("Error, users not created!"))
+  const usersArray = await User.insertMany(req.body);
+  if (!usersArray) {
+    return next(new Error("Error, users not created!"));
   }
-    res.status(200).json({
-      success: true,
-      data: usersArray,
-    });
+  res.status(200).json({
+    success: true,
+    data: usersArray,
   });
-  
+});
 
 // @desc    Update a single user
 // @route   PUT /api/v1/products-scanner/users/:id
