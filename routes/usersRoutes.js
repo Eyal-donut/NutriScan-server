@@ -1,18 +1,16 @@
 import express from "express";
-// import {getAllArticles, getOneArticle, updateOneArticle, deleteOneArticle, postManyArticles, deleteManyArticles, postOneArticle} from '../controllers/articleControllers.js'
+import {
+  getUser,
+  getUsers,
+  updateUser,
+  deleteUser,
+  deleteUsers,
+} from "../controllers/usersController.js";
 
 const usersRouter = express.Router();
 
-usersRouter
-  .route("/")
-  // .get(getAllArticles)
-  // .delete(deleteManyArticles)
-  // .post(postManyArticles);
+usersRouter.route("/").get(getUsers).delete(deleteUsers);
 
-usersRouter
-  .route("/:id")
-  // .get(getOneArticle)
-  // .put(updateOneArticle)
-  // .delete(deleteOneArticle);
+usersRouter.route("/:id").get(getUser).put(updateUser).delete(deleteUser);
 
 export default usersRouter;
