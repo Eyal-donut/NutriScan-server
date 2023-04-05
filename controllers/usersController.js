@@ -32,8 +32,38 @@ export const getUser = asyncHandler(async (req, res, next) => {
   });
 });
 
+// @desc    Create a User
+// @route   POST /api/v1/products-scanner/users
+// @access  Public
+export const createUser = asyncHandler(async (req, res, next) => {
+    const user = await User.create(req.body);
+  if (!user){
+    return next(new Error("Error, user not created!"))
+  }
+    res.status(200).json({
+      success: true,
+      data: user,
+    });
+  });
+  
+
+// @desc    Create many Users
+// @route   POST /api/v1/products-scanner/users/many
+//! @access  Development only
+export const createUsers = asyncHandler(async (req, res, next) => {
+    const usersArray = await User.createMany(req.body);
+  if (!usersArray){
+    return next(new Error("Error, users not created!"))
+  }
+    res.status(200).json({
+      success: true,
+      data: usersArray,
+    });
+  });
+  
+
 // @desc    Update a single user
-// @route   PUT /api/v1/bank/users/:id
+// @route   PUT /api/v1/products-scanner/users/:id
 // @access  Public
 //!Also check: how do I update email and password?
 export const updateUser = asyncHandler(async (req, res, next) => {
@@ -64,7 +94,7 @@ export const updateUser = asyncHandler(async (req, res, next) => {
 });
 
 // @desc    DELETE a single user
-// @route   DELETE /api/v1/bank/users/:id
+// @route   DELETE /api/v1/products-scanner/users/:id
 // @access  Public
 export const deleteUser = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.params.id);
@@ -79,14 +109,12 @@ export const deleteUser = asyncHandler(async (req, res, next) => {
 });
 
 // @desc    Delete all users
-// @route   DELETE /api/v1/users/
+// @route   DELETE /api/v1/products-scanner/users
 //! @access  Private - development only
 export const deleteUsers = asyncHandler(async (req, res, next) => {
-  await User.deleteMany(deleteObj);
+  await User.deleteMany();
   res.status(200).json({
     success: true,
     data: {},
   });
 });
-
-export { getUser, getUsers, updateUser, deleteUser, deleteUsers };
