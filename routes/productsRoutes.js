@@ -1,21 +1,24 @@
 import express from "express";
 
-// import { getAllEditors, signupEditor, loginEditor } from '../controllers/editorControllers.js';
+import {
+  getProduct,
+  getProducts,
+  createProduct,
+  createProducts,
+  deleteProduct,
+  deleteProducts,
+} from "../controllers/productControllers.js";
 
 const productsRouter = express.Router();
 
 productsRouter
   .route("/")
-  // .get(getAllEditors)
-  // .post(signupEditor);
-// .delete(deleteEditor);
+  .get(getProducts)
+  .post(createProduct)
+  .delete(deleteProducts);
 
-productsRouter
-  .route("/:id")
-  // .post(loginEditor);
-// .put(updateEditor)
-// .delete(deleteEditor);
+productsRouter.route("/many").post(createProducts);
+
+productsRouter.route("/:barcode").get(getProduct).delete(deleteProduct);
 
 export default productsRouter;
-
-

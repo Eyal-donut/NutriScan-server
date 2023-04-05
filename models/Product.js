@@ -12,6 +12,9 @@ const ProductSchema = new mongoose.Schema(
     ingredients: {
       type: String,
     },
+    barcodeNumber: {
+      type: Number,
+    },
     createdAt: {
       type: Date,
       default: Date.now,
