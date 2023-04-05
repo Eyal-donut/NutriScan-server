@@ -5,7 +5,10 @@ import Product from "../models/Product.js";
 // @route   GET /api/v1/products-scanner/products/:barcode
 // @access  Public
 export const getProduct = asyncHandler(async (req, res, next) => {
-  const product = await Product.findById(req.params.barcode);
+  const filter = { barcode: Number(req.params.barcode) };
+console.log(filter)
+  const product = await Product.find(filter);
+  console.log(product)
   if (!product) {
     return next(
       new Error(`product with barcode number ${req.params.barcode} not found`)

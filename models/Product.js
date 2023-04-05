@@ -12,14 +12,14 @@ const ProductSchema = new mongoose.Schema(
     ingredients: {
       type: String,
     },
-    barcodeNumber: {
+    barcode: {
       type: Number,
     },
     createdAt: {
       type: Date,
       default: Date.now,
     },
-    dietPreferences: {
+    dietValues: {
       "Gluten free": {
         type: String,
         default: "assessment not possible",
@@ -37,7 +37,7 @@ const ProductSchema = new mongoose.Schema(
         default: "assessment not possible",
       },
     },
-    environmentPreferences: {
+    environmentValues: {
       "silicone & Siloxane": {
         type: String,
         default: "assessment not possible",
@@ -51,7 +51,7 @@ const ProductSchema = new mongoose.Schema(
         default: "assessment not possible",
       },
     },
-    nutritionPreferences: {
+    nutritionValues: {
       Fat: {
         type: Number,
       },
