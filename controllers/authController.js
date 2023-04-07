@@ -20,6 +20,8 @@ export const registerUser = asyncHandler(async (req, res, next) => {
   sendTokenResponse(user, 200, res);
 });
 
+
+
 // @desc    Login user
 // @route   POST /api/v1/auth/login
 // @access  Public
@@ -38,6 +40,29 @@ export const loginUser = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse("Invalid credentials", 401));
   }
   sendTokenResponse(user, 200, res);
+});
+
+
+// @desc    Get all users, or a single user by email
+// @route   GET /api/v1/products-scanner/users
+// @access  Private, auth: admin
+//!Make protected in routes
+export const getUsers = asyncHandler(async (req, res, next) => {
+  const { email } = req.body;
+  const filter = {};
+
+  if (email !== undefined) {
+    filter.email = email;
+  }
+  const users = await User.find(filter);
+
+  if (!users || users.length === 0) {
+    return next(new Error("No users found."));
+  }
+  res.status(200).json({
+    success: true,
+    data: users,
+  });
 });
 
 // // @desc    Log user out / clear cookie
@@ -147,25 +172,41 @@ export const loginUser = asyncHandler(async (req, res, next) => {
 //   sendTokenResponse(user, 200, res);
 // });
 
-// // @desc    Update user details
-// // @route   PUT /api/v1/auth/update-details
-// // @access  Private
-// export const updateDetails = asyncHandler(async (req, res, next) => {
-//   const fieldsToUpdate = {
-//     name: req.body.name,
-//     email: req.body.email
-//   };
+// @desc    Update user details
+// @route   PUT /api/v1/auth/update-details
+// @access  Private
+export const updateUser = asyncHandler(async (req, res, next) => {
+  const { dietPreferences, environmentPreferences, nutritionPreferences, name, email } =
+    req.body;
+  const updateObj = {};
 
-//   const user = await User.findByIdAndUpdate(req.user.id, fieldsToUpdate, {
-//     new: true,
-//     runValidators: true
-//   });
-
-//   res.status(200).json({
-//     success: true,
-//     data: user
-//   });
-// });
+  if (dietPreferences !== undefined) {
+    updateObj.dietPreferences = dietPreferences;
+  }
+  if (environmentPreferences !== undefined) {
+    updateObj.environmentPreferences = environmentPreferences;
+  }
+  if (nutritionPreferences !== undefined) {
+    updateObj.nutritionPreferences = nutritionPreferences;
+  }
+  if (name !== undefined) {
+    updateObj.name = name;
+  }
+  if (email !== undefined) {
+    updateObj.email = email;
+  }
+  const user = await User.findByIdAndUpdate(req.user.id, updateObj, {
+    new: true,
+    runValidators: true,
+  });
+  if (!user) {
+    return next(new Error(`User with ID ${req.params.id} not found`));
+  }
+  res.status(200).json({
+    success: true,
+    data: user,
+  });
+});
 
 // // @desc    Update user password
 // // @route   PUT /api/v1/auth/update-password
