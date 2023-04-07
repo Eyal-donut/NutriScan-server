@@ -8,6 +8,7 @@ import {
   deleteProduct,
   deleteProducts,
 } from "../controllers/productsController.js";
+import { protect, authorize } from "../middleware/authMiddleware.js";
 
 const productsRouter = express.Router();
 
@@ -15,10 +16,10 @@ productsRouter
   .route("/")
   .get(getProducts)
   .post(createProduct)
-  .delete(deleteProducts);
+  .delete(protect, authorize("admin"), deleteProducts);
 
-productsRouter.route("/many").post(createProducts);
+productsRouter.route("/many").post(protect, authorize("admin"), createProducts);
 
-productsRouter.route("/:barcode").get(getProduct).delete(deleteProduct);
+productsRouter.route("/:barcode").get(getProduct).delete(protect, authorize("admin"), deleteProduct);
 
 export default productsRouter;

@@ -3,7 +3,7 @@ import User from "../models/User.js";
 
 // @desc    Get all users, or a single user by email
 // @route   GET /api/v1/products-scanner/users
-// @access  Public
+// @access  dev
 export const getUsers = asyncHandler(async (req, res, next) => {
   const { email } = req.body;
   const filter = {};
@@ -25,7 +25,7 @@ export const getUsers = asyncHandler(async (req, res, next) => {
 
 // @desc    Get a single user
 // @route   GET /api/v1/products-scanner/users/:id
-// @access  Public
+// @access  dev
 export const getUser = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.params.id);
   if (!user) {
@@ -39,9 +39,16 @@ export const getUser = asyncHandler(async (req, res, next) => {
 
 // @desc    Create a User
 // @route   POST /api/v1/products-scanner/users
-// @access  Public
+// @access  dev
 export const createUser = asyncHandler(async (req, res, next) => {
-  const user = await User.create(req.body);
+  const { name, email, password, role } = req.body;
+
+  const user = await User.create({
+    name,
+    email,
+    password,
+    role,
+  });
   if (!user) {
     return next(new Error("Error, user not created!"));
   }
@@ -51,26 +58,37 @@ export const createUser = asyncHandler(async (req, res, next) => {
   });
 });
 
-// @desc    Create many Users
-// @route   POST /api/v1/products-scanner/users/many
-//! @access  Development only
-export const createUsers = asyncHandler(async (req, res, next) => {
-  const usersArray = await User.insertMany(req.body);
+// @desc    Create many users
+// @route   POST /api/v1/auth/register/many
+// @access  dev
+export const CreateManyUsers = asyncHandler(async (req, res, next) => {
+  const usersArray = req.body;
+
   if (!usersArray) {
-    return next(new Error("Error, users not created!"));
+    return next(new Error("Error, pass an array of users."));
+  }
+  let resultArray = [];
+  for (let user of usersArray){
+    const { name, email, password, role } = user;
+    const newUser = await User.create({
+      name,
+      email,
+      password,
+      role,
+    });
+    resultArray.push(newUser);
   }
   res.status(200).json({
     success: true,
-    data: usersArray,
+    data: resultArray,
   });
 });
 
 // @desc    Update a single user
 // @route   PUT /api/v1/products-scanner/users/:id
-// @access  Public
-//!Also check: how do I update email and password?
+// @access  dev
 export const updateUser = asyncHandler(async (req, res, next) => {
-  const { dietPreferences, environmentPreferences, nutritionPreferences } =
+  const { dietPreferences, environmentPreferences, nutritionPreferences, name, email } =
     req.body;
   const updateObj = {};
 
@@ -82,6 +100,12 @@ export const updateUser = asyncHandler(async (req, res, next) => {
   }
   if (nutritionPreferences !== undefined) {
     updateObj.nutritionPreferences = nutritionPreferences;
+  }
+  if (name !== undefined) {
+    updateObj.name = name;
+  }
+  if (email !== undefined) {
+    updateObj.email = email;
   }
   const user = await User.findByIdAndUpdate(req.params.id, updateObj, {
     new: true,
@@ -98,7 +122,7 @@ export const updateUser = asyncHandler(async (req, res, next) => {
 
 // @desc    DELETE a single user
 // @route   DELETE /api/v1/products-scanner/users/:id
-// @access  Public
+// @access  dev
 export const deleteUser = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.params.id);
   if (!user) {
@@ -113,7 +137,7 @@ export const deleteUser = asyncHandler(async (req, res, next) => {
 
 // @desc    Delete all users
 // @route   DELETE /api/v1/products-scanner/users
-//! @access  Private - development only
+// @access  dev
 export const deleteUsers = asyncHandler(async (req, res, next) => {
   await User.deleteMany();
   res.status(200).json({
