@@ -7,6 +7,7 @@ import cors from "cors";
 import connectDB from "./config/db.js";
 import usersRouter from "./routes/usersRoutes.js";
 import productsRouter from "./routes/productsRoutes.js";
+import authRouter from "./routes/authRoutes.js";
 import errorHandler from "./middleware/errorHandler.js";
 
 dotenv.config({ path: "./config/config.env" });
@@ -29,6 +30,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1/products-scanner/users", usersRouter);
 app.use("/api/v1/products-scanner/products", productsRouter);
+app.use("/api/v1/auth", authRouter);
 
 app.use(errorHandler);
 

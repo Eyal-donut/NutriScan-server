@@ -1,5 +1,5 @@
 // import crypto from "crypto";
-// import bcrypt from "bcryptjs";
+import bcrypt from "bcryptjs";
 // import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 
@@ -23,8 +23,13 @@ const UserSchema = new mongoose.Schema(
       required: [true, "Please add a password"],
       minlength: 6,
     },
-    // resetPasswordToken: String,
-    // resetPasswordExpire: Date,
+    role: {
+      type: String,
+      enum: ["user", "admin"],
+      default: "user",
+    },
+    resetPasswordToken: String,
+    resetPasswordExpire: Date,
     createdAt: {
       type: Date,
       default: Date.now,
@@ -97,29 +102,29 @@ const UserSchema = new mongoose.Schema(
   {
     toJSON: {
       transform(_, ret) {
-        delete ret.password;
+        // delete ret.password;
         delete ret.__v;
       },
     },
     toObject: {
       transform(_, ret) {
-        delete ret.password;
+        // delete ret.password;
         delete ret.__v;
       },
     },
   }
 );
 
-// // encrypt password using bcrypt
-// UserSchema.pre("save", async function (next) {
-//   // If the password has not been modified proceed to next middleware
-//   if (!this.isModified("password")) {
-//     next();
-//   }
+// encrypt password using bcrypt
+UserSchema.pre("save", async function (next) {
+  // If the password has not been modified proceed to next middleware
+  if (!this.isModified("password")) {
+    next();
+  }
 
-//   const salt = await bcrypt.genSalt(10);
-//   this.password = await bcrypt.hash(this.password, salt);
-// });
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+});
 
 // // Instance method to sign JWT and return
 // UserSchema.methods.getSignedJwtToken = function () {
