@@ -2,12 +2,11 @@ import express from "express";
 import {
   registerUser,
   loginUser,
-  registerManyUsers,
   // logout,
   // getCurrentUser,
   // forgotPassword,
   // resetPassword,
-  updateUser,
+  // updateUser,
   // updatePassword
 } from "../controllers/authController.js";
 
@@ -22,10 +21,8 @@ authRouter.post("/login", loginUser);
 // authRouter.get('/logout', logout);
 // authRouter.get('/current-user', protect, getCurrentUser);
 // authRouter.put('/reset-password/:resettoken', resetPassword);
-authRouter.put("/update-user", protect, updateUser);
+// authRouter.put("/update-user", protect, updateUser);
 // authRouter.put('/update-password', protect, updatePassword);
 
-//!development only - In production, protect these routes and use authentication admin
-authRouter.post("/register/many", registerManyUsers);
 
 export default authRouter;

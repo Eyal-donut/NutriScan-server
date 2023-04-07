@@ -21,7 +21,6 @@ export const registerUser = asyncHandler(async (req, res, next) => {
 });
 
 
-
 // @desc    Login user
 // @route   POST /api/v1/auth/login
 // @access  Public
@@ -42,28 +41,6 @@ export const loginUser = asyncHandler(async (req, res, next) => {
   sendTokenResponse(user, 200, res);
 });
 
-
-// @desc    Get all users, or a single user by email
-// @route   GET /api/v1/products-scanner/users
-// @access  Private, auth: admin
-//!Make protected in routes
-export const getUsers = asyncHandler(async (req, res, next) => {
-  const { email } = req.body;
-  const filter = {};
-
-  if (email !== undefined) {
-    filter.email = email;
-  }
-  const users = await User.find(filter);
-
-  if (!users || users.length === 0) {
-    return next(new Error("No users found."));
-  }
-  res.status(200).json({
-    success: true,
-    data: users,
-  });
-});
 
 // // @desc    Log user out / clear cookie
 // // @route   GET /api/v1/auth/logout
