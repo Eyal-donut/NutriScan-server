@@ -4,11 +4,11 @@ const sendTokenResponse = (user, statusCode, res) => {
   const token = user.getSignedJwtToken();
 
   const options = {
-    expires: new Date(
-      // Convert the 30 days in the config t0 30 days in milliseconds
-      Date.now() + process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60 * 1000
-    ),
     httpOnly: true
+    // expires: new Date(
+    //   // Convert the 30 days in the config t0 30 days in milliseconds
+    //   Date.now() + process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60 * 1000
+    // ),
   };
 
   // Send secure cookie in production

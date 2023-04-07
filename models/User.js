@@ -1,6 +1,6 @@
 // import crypto from "crypto";
 import bcrypt from "bcryptjs";
-// import jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema(
@@ -102,13 +102,13 @@ const UserSchema = new mongoose.Schema(
   {
     toJSON: {
       transform(_, ret) {
-        // delete ret.password;
+        delete ret.password;
         delete ret.__v;
       },
     },
     toObject: {
       transform(_, ret) {
-        // delete ret.password;
+        delete ret.password;
         delete ret.__v;
       },
     },
@@ -127,16 +127,16 @@ UserSchema.pre("save", async function (next) {
 });
 
 // // Instance method to sign JWT and return
-// UserSchema.methods.getSignedJwtToken = function () {
-//   return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
-//     expiresIn: process.env.JWT_EXPIRE,
-//   });
-// };
+UserSchema.methods.getSignedJwtToken = function () {
+  return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
+    // Optional: expiresIn: process.env.JWT_EXPIRE,
+  });
+};
 
-// // Match user entered password to hashed password in database
-// UserSchema.methods.matchPassword = async function (enteredPassword) {
-//   return await bcrypt.compare(enteredPassword, this.password);
-// };
+// Match user entered password to hashed password in database
+UserSchema.methods.matchPassword = async function (enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password);
+};
 
 // // Generate and hash password token
 // UserSchema.methods.getResetPasswordToken = function () {

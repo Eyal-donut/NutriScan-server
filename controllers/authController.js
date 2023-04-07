@@ -1,7 +1,7 @@
 // import crypto from 'crypto';
 // import ErrorResponse from '../utils/errorResponse.js';
 // import sendEmail from '../utils/sendEmail.js';
-// import sendTokenResponse from "../utils/sendTokenResponse.js";
+import sendTokenResponse from "../utils/sendTokenResponse.js";
 import asyncHandler from "../middleware/asyncHandler.js";
 import User from "../models/User.js";
 
@@ -17,13 +17,7 @@ export const registerUser = asyncHandler(async (req, res, next) => {
     password,
     role,
   });
-
-  res.status(201).send({
-    success: true,
-    data: user,
-  });
-  // Send token to client
-  // sendTokenResponse(user, 200, res);
+  sendTokenResponse(user, 200, res);
 });
 
 // @desc    Login user
@@ -32,27 +26,17 @@ export const registerUser = asyncHandler(async (req, res, next) => {
 export const loginUser = asyncHandler(async (req, res, next) => {
   const { email, password } = req.body;
 
-  // Validate email and password
   if (!email || !password) {
-    return next(new ErrorResponse('Please provide an email and password', 400));
+    return next(new ErrorResponse("Please provide an email and password", 400));
   }
-
-  // Check for user
-  const user = await User.findOne({ email }).select('+password');
-
+  const user = await User.findOne({ email }).select("+password");
   if (!user) {
-    return next(new ErrorResponse('Invalid credentials', 401));
+    return next(new ErrorResponse("Invalid credentials", 401));
   }
-
-  // Check if password matches
   const isMatch = await user.matchPassword(password);
-
   if (!isMatch) {
-    // Important to return the same error message so no one can know the reason for login failure
-    return next(new ErrorResponse('Invalid credentials', 401));
+    return next(new ErrorResponse("Invalid credentials", 401));
   }
-
-  // Send token to client
   sendTokenResponse(user, 200, res);
 });
 

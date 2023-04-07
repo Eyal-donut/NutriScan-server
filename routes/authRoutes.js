@@ -1,7 +1,7 @@
 import express from 'express';
 import {
   registerUser,
-  // loginUser,
+  loginUser,
   // logout,
   // getCurrentUser,
   // forgotPassword,
@@ -15,7 +15,7 @@ import { protect } from './../middleware/authMiddleware.js';
 const authRouter = express.Router();
 
 authRouter.post('/register', registerUser);
-// authRouter.post('/login', loginUser);
+authRouter.post('/login', loginUser);
 // authRouter.post('/forgot-password', forgotPassword);
 // authRouter.get('/logout', logout);
 // authRouter.get('/current-user', protect, getCurrentUser);
