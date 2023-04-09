@@ -12,18 +12,21 @@ const performScraping = async () => {
       width: 1920,
       height: 1080,
       timeout: 0,
+      executablePath: "/path/to/Chrome",
     },
   });
   const page = await browser.newPage();
   await page.setUserAgent(
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   );
-  await page.goto(`https://www.rami-levy.co.il/he/online/market/%D7%90%D7%97%D7%96%D7%A7%D7%AA-%D7%94%D7%91%D7%99%D7%AA-%D7%95%D7%91%D7%A2-%D7%97`);
+  await page.goto(
+    `https://www.rami-levy.co.il/he/online/market/%D7%A4%D7%90%D7%A8%D7%9D-%D7%95%D7%AA%D7%99%D7%A0%D7%95%D7%A7%D7%95%D7%AA`
+  );
 
   await page.waitForSelector(selectors.categoryHeaderSelector);
-  
+
   //Scroll until you can't scroll no more
-  // await autoScroll(page);
+  await autoScroll(page);
 
   const categories = await page.$$(selectors.categorySelector);
 
@@ -143,7 +146,7 @@ const performScraping = async () => {
     }
   }
 
-  // await browser.close();
+  await browser.close();
 };
 
 performScraping();
