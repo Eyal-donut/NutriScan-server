@@ -11,6 +11,7 @@ const performScraping = async () => {
     defaultViewport: {
       width: 1920,
       height: 1080,
+      protocolTimeout: 0,
     },
   });
   const page = await browser.newPage();
@@ -128,7 +129,7 @@ const performScraping = async () => {
 
       // productsArray.push(productObj);
       // console.log(productsArray);
-      createProductLocally(productObj)
+      createProductLocally(productObj);
 
       await page.click(selectors.modalExitSelector);
 
