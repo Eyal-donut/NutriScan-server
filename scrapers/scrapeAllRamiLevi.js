@@ -12,7 +12,6 @@ const performScraping = async () => {
       width: 1920,
       height: 1080,
       timeout: 0,
-      executablePath: "/path/to/Chrome",
     },
   });
   const page = await browser.newPage();
@@ -20,133 +19,146 @@ const performScraping = async () => {
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   );
   await page.goto(
-    `https://www.rami-levy.co.il/he/online/market/%D7%A4%D7%90%D7%A8%D7%9D-%D7%95%D7%AA%D7%99%D7%A0%D7%95%D7%A7%D7%95%D7%AA`
+    `https://www.rami-levy.co.il/he/online/market/%D7%97%D7%9C%D7%91-%D7%91%D7%99%D7%A6%D7%99%D7%9D-%D7%95%D7%A1%D7%9C%D7%98%D7%99%D7%9D`
   );
 
-  await page.waitForSelector(selectors.categoryHeaderSelector);
+  while (true) {
+    try {
+      // await page.waitForSelector(selectors.categoryHeaderSelector);
+      await page.waitForSelector(selectors.imageSelector);
 
-  //Scroll until you can't scroll no more
-  await autoScroll(page);
+      //Scroll until you can't scroll no more
+      await autoScroll(page);
 
-  const categories = await page.$$(selectors.categorySelector);
+      const categories = await page.$$(selectors.categorySelector);
 
-  let header;
-  let productObj = {};
-  // const productsArray = [];
+      let header;
+      let productObj = {};
+      // const productsArray = [];
 
-  for (let category of categories) {
-    header = await category.$eval(selectors.categoryHeaderSelector, (el) =>
-      el.innerText.trim()
-    );
-
-    const productCards = await category.$$(selectors.productCardSelector);
-
-    for (let productCard of productCards) {
-      await wait(1000);
-
-      //~ Scrape Image if exists
-      const imageElement = await page.$(selectors.imageSelector);
-      if (imageElement) {
-        const imageSrc = await productCard.$eval(
-          selectors.imageSelector,
-          (el) => el.getAttribute("src")
+      for (let category of categories) {
+        header = await category.$eval(selectors.categoryHeaderSelector, (el) =>
+          el.innerText.trim()
         );
-        const imageURL = `https://www.rami-levy.co.il${imageSrc}`;
 
-        productObj = { category: header, imageURL };
-      }
+        const productCards = await category.$$(selectors.productCardSelector);
 
-      await productCard.click();
-      await page.waitForSelector(selectors.modalSelector);
+        for (let productCard of productCards) {
+          await wait(1000);
 
-      //~ Scrape Ingredients if exists
-      const ingredientsTextElement = await page
-        .waitForSelector(selectors.ingredientsSelector, { timeout: 500 })
-        .catch(() => null);
-      if (ingredientsTextElement) {
-        const ingredientsHeaderElement = await page.$(
-          selectors.ingredientsHeaderSelector
-        );
-        if (ingredientsHeaderElement) {
-          const ingredientsHeaderText = await page.$eval(
-            selectors.ingredientsHeaderSelector,
-            (el) => el.innerText
-          );
-          if (ingredientsHeaderText === "רכיבים") {
-            const ingredientsText = await page.$eval(
-              selectors.ingredientsSelector,
+          //~ Scrape Image if exists
+          const imageElement = await page.$(selectors.imageSelector);
+          if (imageElement) {
+            const imageSrc = await productCard.$eval(
+              selectors.imageSelector,
+              (el) => el.getAttribute("src")
+            );
+            const imageURL = `https://www.rami-levy.co.il${imageSrc}`;
+
+            productObj = { category: header, imageURL };
+          }
+
+          await productCard.click();
+          await page.waitForSelector(selectors.modalSelector);
+
+          //~ Scrape Ingredients if exists
+          const ingredientsTextElement = await page
+            .waitForSelector(selectors.ingredientsSelector, { timeout: 500 })
+            .catch(() => null);
+          if (ingredientsTextElement) {
+            const ingredientsHeaderElement = await page.$(
+              selectors.ingredientsHeaderSelector
+            );
+            if (ingredientsHeaderElement) {
+              const ingredientsHeaderText = await page.$eval(
+                selectors.ingredientsHeaderSelector,
+                (el) => el.innerText
+              );
+              if (ingredientsHeaderText === "רכיבים") {
+                const ingredientsText = await page.$eval(
+                  selectors.ingredientsSelector,
+                  (el) => el.innerText
+                );
+                productObj = { ...productObj, ingredients: ingredientsText };
+              }
+            }
+          }
+
+          //~ Scrape barcode if exists
+          const barcodeElement = await page.$(selectors.barcodeSelector);
+          if (barcodeElement) {
+            const barcodeString = await page.$eval(
+              selectors.barcodeSelector,
               (el) => el.innerText
             );
-            productObj = { ...productObj, ingredients: ingredientsText };
+            const barcodeNumber = Number(barcodeString.match(/\d+/));
+
+            productObj = { ...productObj, barcode: barcodeNumber };
           }
+
+          //~ Scrape productName if exists
+          const productNameElement = await page.$(
+            selectors.productNameSelector
+          );
+          if (productNameElement) {
+            const productName = await page.$eval(
+              selectors.productNameSelector,
+              (el) => el.innerText
+            );
+
+            productObj = { ...productObj, name: productName };
+          }
+
+          //~ Scrape company if exists
+          const companyElement = await page.$(selectors.companySelector);
+          if (companyElement) {
+            const company = await page.$eval(
+              selectors.companySelector,
+              (el) => el.innerText
+            );
+
+            productObj = { ...productObj, company: company };
+          }
+
+          //~ Scrape nutritional values if exists
+          const nutritionalValuesHeaderElement = await page
+            .waitForSelector(selectors.nutritionalValuesHeader, {
+              timeout: 500,
+            })
+            .catch(() => null);
+          if (nutritionalValuesHeaderElement) {
+            await page.click(selectors.nutritionalValuesHeader);
+            await page.waitForSelector(selectors.nutritionalValuesTable);
+            const nutValuesText = await page.$eval(
+              selectors.nutritionalValuesTable,
+              (el) => el.innerText
+            );
+
+            productObj = { ...productObj, nutritionalValues: nutValuesText };
+          }
+
+          // productsArray.push(productObj);
+          // console.log(productsArray);
+          createProductLocally(productObj);
+
+          await page.click(selectors.modalExitSelector);
+
+          await page
+            .waitForSelector(selectors.modalSelector, {
+              hidden: true,
+              timeout: 5000,
+            })
+            .catch(() => null);
         }
       }
 
-      //~ Scrape barcode if exists
-      const barcodeElement = await page.$(selectors.barcodeSelector);
-      if (barcodeElement) {
-        const barcodeString = await page.$eval(
-          selectors.barcodeSelector,
-          (el) => el.innerText
-        );
-        const barcodeNumber = Number(barcodeString.match(/\d+/));
-
-        productObj = { ...productObj, barcode: barcodeNumber };
-      }
-
-      //~ Scrape productName if exists
-      const productNameElement = await page.$(selectors.productNameSelector);
-      if (productNameElement) {
-        const productName = await page.$eval(
-          selectors.productNameSelector,
-          (el) => el.innerText
-        );
-
-        productObj = { ...productObj, name: productName };
-      }
-
-      //~ Scrape company if exists
-      const companyElement = await page.$(selectors.companySelector);
-      if (companyElement) {
-        const company = await page.$eval(
-          selectors.companySelector,
-          (el) => el.innerText
-        );
-
-        productObj = { ...productObj, company: company };
-      }
-
-      //~ Scrape nutritional values if exists
-      const nutritionalValuesHeaderElement = await page
-        .waitForSelector(selectors.nutritionalValuesHeader, { timeout: 500 })
-        .catch(() => null);
-      if (nutritionalValuesHeaderElement) {
-        await page.click(selectors.nutritionalValuesHeader);
-        await page.waitForSelector(selectors.nutritionalValuesTable);
-        const nutValuesText = await page.$eval(
-          selectors.nutritionalValuesTable,
-          (el) => el.innerText
-        );
-
-        productObj = { ...productObj, nutritionalValues: nutValuesText };
-      }
-
-      // productsArray.push(productObj);
-      // console.log(productsArray);
-      createProductLocally(productObj);
-
-      await page.click(selectors.modalExitSelector);
-
-      await page
-        .waitForSelector(selectors.modalSelector, {
-          hidden: true,
-          timeout: 5000,
-        })
-        .catch(() => null);
+      await browser.close();
+      break;
+    } catch (error) {
+      await page.reload({ waitUntil: ["networkidle0", "domcontentloaded"] });
+      continue;
     }
   }
-
-  await browser.close();
 };
 
 performScraping();
