@@ -23,7 +23,7 @@ const performScraping = async () => {
   await page.waitForSelector(selectors.categoryHeaderSelector);
   
   //Scroll until you can't scroll no more
-  await autoScroll(page);
+  // await autoScroll(page);
 
   const categories = await page.$$(selectors.categorySelector);
 
