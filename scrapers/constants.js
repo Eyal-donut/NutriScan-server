@@ -15,7 +15,7 @@ export const selectors = {
   ingredientsHeaderSelector:
     "#main-product-modal___BV_modal_outer_ #main-product-modal .modal-dialog #main-product-modal___BV_modal_content_ #main-product-modal___BV_modal_body_ .inner-scroll-popup-product div:last-child div .main-product .pt-2 div div div div div",
   nutritionalValuesHeader:
-    "#main-product-modal___BV_modal_outer_ #main-product-modal .modal-dialog #main-product-modal___BV_modal_content_ #main-product-modal___BV_modal_body_ .inner-scroll-popup-product div:last-child div .main-product .pt-2 .col-lg-9 .py-3 .px-3",
+    "#main-product-modal___BV_modal_outer_ #main-product-modal .modal-dialog #main-product-modal___BV_modal_content_ #main-product-modal___BV_modal_body_ .inner-scroll-popup-product div:last-child div .main-product .pt-2 .col-lg-9 .py-3 .px-3 svg",
   nutritionalValuesTable:
     "#main-product-modal___BV_modal_outer_ #main-product-modal .modal-dialog #main-product-modal___BV_modal_content_ #main-product-modal___BV_modal_body_ .inner-scroll-popup-product div:last-child div .main-product .pt-2 .col-lg-9 .py-3 .nutritional-values-swiper",
   modalSelector: "#main-product-modal___BV_modal_outer_ #main-product-modal",
