@@ -49,4 +49,4 @@ const performScraping = async (barcodeNumber) => {
   await browser.close();
 };
 
-performScraping(8000500023976);
+performScraping(7290000060088);

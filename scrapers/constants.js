@@ -11,7 +11,9 @@ export const selectors = {
   productCardSelector:
     "#__nuxt #__layout #main-content > div div:last-child > div #main-content > div > div:last-child > div",
   ingredientsSelector:
-    "#main-product-modal___BV_modal_outer_ #main-product-modal .modal-dialog #main-product-modal___BV_modal_content_ #main-product-modal___BV_modal_body_ .inner-scroll-popup-product div:last-child div .main-product .pt-2 div div div div",
+  "#main-product-modal___BV_modal_outer_ #main-product-modal .modal-dialog #main-product-modal___BV_modal_content_ #main-product-modal___BV_modal_body_ .inner-scroll-popup-product div:last-child div .main-product .pt-2 div div div div div:nth-child(2)",
+  ingredientsHeaderSelector:
+    "#main-product-modal___BV_modal_outer_ #main-product-modal .modal-dialog #main-product-modal___BV_modal_content_ #main-product-modal___BV_modal_body_ .inner-scroll-popup-product div:last-child div .main-product .pt-2 div div div div div",
   nutritionalValuesHeader:
     "#main-product-modal___BV_modal_outer_ #main-product-modal .modal-dialog #main-product-modal___BV_modal_content_ #main-product-modal___BV_modal_body_ .inner-scroll-popup-product div:last-child div .main-product .pt-2 .col-lg-9 .py-3 .px-3",
   nutritionalValuesTable:
