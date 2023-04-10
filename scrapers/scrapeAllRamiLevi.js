@@ -153,9 +153,11 @@ const performScraping = async () => {
       }
 
       await browser.close();
+      console.log("I'm done bra".yellow.bold)
       break;
     } catch (error) {
       await page.reload({ waitUntil: ["networkidle0", "domcontentloaded"] });
+      console.log("page reloaded".yellow.bold)
       continue;
     }
   }
