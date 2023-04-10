@@ -1,2 +1,1 @@
-
-      await page.waitForSelector(selectors.modalSelector);
+https://www.rami-levy.co.il/he/online/market/%D7%9E%D7%A9%D7%A7%D7%90%D7%95%D7%AA

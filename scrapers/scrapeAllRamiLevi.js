@@ -7,6 +7,7 @@ import { createProductLocally } from "./local database/products.js";
 
 const performScraping = async () => {
   const browser = await puppeteer.launch({
+    // executablePath: `C:/Program Files/Google/Chrome/Application/chrome.exe`,
     headless: false,
     defaultViewport: {
       width: 1920,
@@ -18,12 +19,12 @@ const performScraping = async () => {
   await page.setUserAgent(
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   );
-  await page.goto(
-    `https://www.rami-levy.co.il/he/online/market/%D7%97%D7%9C%D7%91-%D7%91%D7%99%D7%A6%D7%99%D7%9D-%D7%95%D7%A1%D7%9C%D7%98%D7%99%D7%9D`
-  );
-
+  
   while (true) {
     try {
+      await page.goto(
+        `https://www.rami-levy.co.il/he/online/market/%D7%9E%D7%A9%D7%A7%D7%90%D7%95%D7%AA`
+      );
       // await page.waitForSelector(selectors.categoryHeaderSelector);
       await page.waitForSelector(selectors.imageSelector);
 
@@ -153,11 +154,11 @@ const performScraping = async () => {
       }
 
       await browser.close();
-      console.log("I'm done bra".yellow.bold)
+      console.log("I'm done bra".yellow.bold);
       break;
     } catch (error) {
       await page.reload({ waitUntil: ["networkidle0", "domcontentloaded"] });
-      console.log("page reloaded".yellow.bold)
+      console.log("page reloaded".yellow.bold);
       continue;
     }
   }
