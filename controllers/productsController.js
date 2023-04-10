@@ -6,8 +6,7 @@ import Product from "../models/Product.js";
 // @access  Public
 export const getProduct = asyncHandler(async (req, res, next) => {
   const filter = { barcode: Number(req.params.barcode) };
-console.log(filter)
-  const product = await Product.find(filter);
+  const product = await Product.findOne(filter);
   console.log(product)
   if (!product) {
     return next(

@@ -20,6 +20,9 @@ productsRouter
 
 productsRouter.route("/many").post(protect, authorize("admin"), createProducts);
 
-productsRouter.route("/:barcode").get(getProduct).delete(protect, authorize("admin"), deleteProduct);
+productsRouter
+  .route("/:barcode")
+  .get(getProduct)
+  .delete(protect, authorize("admin"), deleteProduct);
 
 export default productsRouter;
