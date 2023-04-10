@@ -1,0 +1,856 @@
+[
+  {
+    "category": "ירקות טריים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290000961804/299653/medium.jpg",
+    "barcode": 7290000961804,
+    "name": "דלעת ארוזה"
+  },
+  {
+    "category": "ירקות טריים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016334050/310677/medium.jpg",
+    "barcode": 7290016334050,
+    "name": "סלרי חתוך"
+  },
+  {
+    "category": "ירקות טריים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016270709/321677/medium.jpg",
+    "barcode": 7290016270709,
+    "name": "עגבניות שרי 460 ג"
+  },
+  {
+    "category": "ירקות טריים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016334883/351511/medium.jpg",
+    "barcode": 7290016334883,
+    "name": "עגבניות שרי תמר"
+  },
+  {
+    "category": "ירקות טריים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016334890/351512/medium.jpg",
+    "barcode": 7290016334890,
+    "name": "עגבניות שרי ליקופן"
+  },
+  {
+    "category": "ירקות טריים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016334906/351513/medium.jpg",
+    "barcode": 7290016334906,
+    "name": "עגבניות שרי מיקס"
+  },
+  {
+    "category": "ירקות טריים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290015014922/351514/medium.jpg",
+    "barcode": 7290015014922,
+    "name": "עגבניות שרי צהוב"
+  },
+  {
+    "category": "ירקות טריים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016334173/321408/medium.jpg",
+    "barcode": 7290016334173,
+    "name": "פלפלונים רמי לוי"
+  },
+  {
+    "category": "ירקות טריים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016334180/321409/medium.jpg",
+    "barcode": 7290016334180,
+    "name": "מלפפון בייבי רמי לוי"
+  },
+  {
+    "category": "ירקות טריים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016334296/321410/medium.jpg",
+    "barcode": 7290016334296,
+    "name": "ברוקולי רמי לוי"
+  },
+  {
+    "category": "ירקות טריים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010051267/small.jpg",
+    "ingredients": "לוף",
+    "barcode": 7290010051267,
+    "name": "לוף במארז",
+    "company": "רעננים פלוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016334500/326016/medium.jpg",
+    "barcode": 7290016334500,
+    "name": "זוג לבבות חסה"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/102/4/medium.jpg",
+    "barcode": 102,
+    "name": "גזר ארוז"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016733259/322125/medium.jpg",
+    "barcode": 7290016733259,
+    "name": "סלק מבושל בוואקום 500ג"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/4770577201204/347760/medium.jpg",
+    "barcode": 4770577201204,
+    "name": "סלק מבושל בוואקום 1 ק\"ג"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/608614331475/352461/medium.jpg",
+    "barcode": 608614331475,
+    "name": "כרובית ארוזה"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/148/361876/medium.jpg",
+    "barcode": 148,
+    "name": "תירס טרי"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290000000978/284134/medium.jpg",
+    "barcode": 7290000000978,
+    "name": "חסה מהדרין קטיף טרי"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290015014182/335822/medium.jpg",
+    "barcode": 7290015014182,
+    "name": "לבבות קיסר בנספק רמי לוי"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290000000411/small.jpg",
+    "ingredients": "שום",
+    "barcode": 7290000000411,
+    "name": "מארז שום 4 יחידות",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290015014274/310678/medium.jpg",
+    "barcode": 7290015014274,
+    "name": "צנוניות רמי לוי 500ג"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290003569021/322345/medium.jpg",
+    "barcode": 7290003569021,
+    "name": "כרובית ארוזה יח' רמי לוי"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016334654/345573/medium.jpg",
+    "barcode": 7290016334654,
+    "name": "תרד ניו זילנדי רמי לוי"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864556/small.jpg",
+    "ingredients": "עלי תרד במארז",
+    "barcode": 7290017864556,
+    "name": "בייבי תרד במארז רמי לוי",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290015014472/344351/medium.jpg",
+    "barcode": 7290015014472,
+    "name": "טימין רמי לוי"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864471/362687/medium.jpg",
+    "barcode": 7290017864471,
+    "name": "עלי בייבי 250ג רמי לוי"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864341/small.jpg",
+    "barcode": 7290017864341,
+    "name": "מארז תפוח אדמה",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290107939027/small.jpg",
+    "barcode": 7290107939027,
+    "name": "גזר דק דק שטראוס",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290103400194/small.jpg",
+    "barcode": 7290103400194,
+    "name": "6*כרוב לבן 400 גרם טעם הטבע",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290106653689/small.jpg",
+    "barcode": 7290106653689,
+    "name": "לקט לסלט אסייאתי שטראוס",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290008644945/small.jpg",
+    "barcode": 7290008644945,
+    "name": "לקט לסלט המושבה שטראוס",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290104721953/small.jpg",
+    "barcode": 7290104721953,
+    "name": "סלט מסולסלים 350ג",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290107933155/small.jpg",
+    "barcode": 7290107933155,
+    "name": "לקט לסלט סלנובה שטראוס",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290106528949/small.jpg",
+    "barcode": 7290106528949,
+    "name": "לקט לסלט ערוגות שטראוס",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290008644235/small.jpg",
+    "barcode": 7290008644235,
+    "name": "עלי בייבי שטראוס",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290103408206/small.jpg",
+    "barcode": 7290103408206,
+    "name": "עלי חסה ערבית שטראוס",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290112351524/small.jpg",
+    "barcode": 7290112351524,
+    "name": "עלי סלנובה 200 גר' שטראוס",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290104065934/small.jpg",
+    "barcode": 7290104065934,
+    "name": "עלי רוקט שטראוס",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290106723689/small.jpg",
+    "barcode": 7290106723689,
+    "name": "עלי תרד בייבי שטראוס",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010650767/small.jpg",
+    "barcode": 7290010650767,
+    "name": "אנדיב (עולש) אדום",
+    "company": "חוות תקוע"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010650019/small.jpg",
+    "barcode": 7290010650019,
+    "name": "אנדיב (עולש)",
+    "company": "חוות תקוע"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010650705/small.jpg",
+    "barcode": 7290010650705,
+    "name": "אפונת שלג",
+    "company": "חוות תקוע"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010650286/small.jpg",
+    "barcode": 7290010650286,
+    "name": "בייבי ברוקולי",
+    "company": "חוות תקוע"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010650194/small.jpg",
+    "barcode": 7290010650194,
+    "name": "שורש ג'ינג'ר טרי",
+    "company": "חוות תקוע"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010650668/small.jpg",
+    "barcode": 7290010650668,
+    "name": "למון גראס",
+    "company": "חוות תקוע"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010650996/small.jpg",
+    "barcode": 7290010650996,
+    "name": "פטריות שי- מג'י חומות",
+    "company": "חוות תקוע"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010650828/small.jpg",
+    "barcode": 7290010650828,
+    "name": "פטריות שי- מג'י",
+    "company": "חוות תקוע"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018394083/small.jpg",
+    "barcode": 7290018394083,
+    "name": "שום פנינה",
+    "company": "חוות תקוע"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010051298/small.jpg",
+    "barcode": 7290010051298,
+    "name": "סלק עלים-מנגולד ארוז",
+    "company": "א.אדמה"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010051182/small.jpg",
+    "barcode": 7290010051182,
+    "name": "נענע במארז",
+    "company": "א.אדמה"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010051205/small.jpg",
+    "barcode": 7290010051205,
+    "name": "עלי סלרי ארוז",
+    "company": "א.אדמה"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010051144/small.jpg",
+    "barcode": 7290010051144,
+    "name": "עלי תרד במארז",
+    "company": "א.אדמה"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290110558901/small.jpg",
+    "barcode": 7290110558901,
+    "name": "עלי חסה מתולתלת 150 גר'",
+    "company": "שטראוס"
+  },
+  {
+    "category": "ירקות ארוזים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290013215017/273009/medium.jpg",
+    "barcode": 7290013215017,
+    "name": "פטריות זוגות חוות השמפניון"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864365/small.jpg",
+    "barcode": 7290017864365,
+    "name": "פטרוזיליה במארז",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864372/small.jpg",
+    "barcode": 7290017864372,
+    "name": "שמיר במארז",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864389/small.jpg",
+    "barcode": 7290017864389,
+    "name": "כוסברה במארז",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864396/small.jpg",
+    "barcode": 7290017864396,
+    "name": "עלי סלרי במארז",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864402/small.jpg",
+    "barcode": 7290017864402,
+    "name": "סלק עלים במארז",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290016334456/small.jpg",
+    "barcode": 7290016334456,
+    "name": "בזיליקום",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290015014465/335808/medium.jpg",
+    "barcode": 7290015014465,
+    "name": "רוזמרין רמילוי"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864358/small.jpg",
+    "barcode": 7290017864358,
+    "name": "נענע במארז",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864419/small.jpg",
+    "barcode": 7290017864419,
+    "name": "שורש פטרוזיליה",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864426/small.jpg",
+    "barcode": 7290017864426,
+    "name": "בצל ירוק רמי לוי",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017864457/small.jpg",
+    "barcode": 7290017864457,
+    "name": "שורש סלרי במארז",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010051335/small.jpg",
+    "barcode": 7290010051335,
+    "name": "בצל ירוק ארוז",
+    "company": "א.אדמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010051168/small.jpg",
+    "barcode": 7290010051168,
+    "name": "כוסברה במארז",
+    "company": "א.אדמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010051052/small.jpg",
+    "barcode": 7290010051052,
+    "name": "פטרוזיליה במארז",
+    "company": "א.אדמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010051199/small.jpg",
+    "barcode": 7290010051199,
+    "name": "שורש פטרוזיליה",
+    "company": "א.אדמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290010051175/small.jpg",
+    "barcode": 7290010051175,
+    "name": "שמיר ארוז",
+    "company": "א.אדמה"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017487625/small.jpg",
+    "barcode": 7290017487625,
+    "name": "שמיר שדות בעמק",
+    "company": "שדות בעמק"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017487441/small.jpg",
+    "barcode": 7290017487441,
+    "name": "בצל ירוק שדות בעמק",
+    "company": "שדות בעמק"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/225/12465/medium.jpg",
+    "barcode": 225,
+    "name": "ג'ינג'ר תפזורת"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017487618/small.jpg",
+    "barcode": 7290017487618,
+    "name": "כוסברה שדות בעמק",
+    "company": "שדות בעמק"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017487595/small.jpg",
+    "barcode": 7290017487595,
+    "name": "נענע",
+    "company": "שדות בעמק"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017487823/small.jpg",
+    "barcode": 7290017487823,
+    "name": "עלי סלרי שדות בעמק",
+    "company": "שדות בעמק"
+  },
+  {
+    "category": "עשבי תיבול",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017487601/small.jpg",
+    "barcode": 7290017487601,
+    "name": "פטרוזיליה שדות בעמק",
+    "company": "שדות בעמק"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566275/small.jpg",
+    "barcode": 7290018566275,
+    "name": "רמי לוי פאקן טבעי",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566312/small.jpg",
+    "barcode": 7290018566312,
+    "name": "שקד טבעי",
+    "company": "קליית השיקמה"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566008/small.jpg",
+    "barcode": 7290018566008,
+    "name": "אגוזי מלך קלופים",
+    "company": "רמי לווי שיווק השקמה"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566022/small.jpg",
+    "barcode": 7290018566022,
+    "name": "שקדים טבעיים",
+    "company": "קליית השיקמה- רמי לוי"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566039/small.jpg",
+    "barcode": 7290018566039,
+    "name": "פקאן טבעי",
+    "company": "קליית השיקמה- רמי לוי"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566053/small.jpg",
+    "barcode": 7290018566053,
+    "name": "שקד מולבן מקלות",
+    "company": "רמי לווי שיווק השקמה"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566060/small.jpg",
+    "barcode": 7290018566060,
+    "name": "שקד מולבן חצוי",
+    "company": "רמי לווי שיווק השקמה"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566077/small.jpg",
+    "barcode": 7290018566077,
+    "name": "קשיו טבעי",
+    "company": "רמי לווי שיווק השקמה"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566145/small.jpg",
+    "barcode": 7290018566145,
+    "name": "שקד מולבן פרוס",
+    "company": "רמי לווי שיווק השקמה"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566510/small.jpg",
+    "barcode": 7290018566510,
+    "name": "שקד מולבן גרוס",
+    "company": "רמי לווי שיווק השקמה"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566206/small.jpg",
+    "barcode": 7290018566206,
+    "name": "רמי לוי אגוז מלך קלוף",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566305/small.jpg",
+    "barcode": 7290018566305,
+    "name": "רמי לוי גרעיני דלעת קלופים",
+    "company": "רמי לוי שיווק השקמה"
+  },
+  {
+    "category": "פיצוחים טבעיים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566213/small.jpg",
+    "barcode": 7290018566213,
+    "name": "אגוז מלך גרוס",
+    "company": "רמי לווי שיווק השקמה"
+  },
+  {
+    "category": "פיצוחים קלויים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566176/small.jpg",
+    "ingredients": "פיסטוק, מלח, מים, קמח תפו\"א.",
+    "barcode": 7290018566176,
+    "name": "רמי לוי קשיו קלוי",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "575\nקלוריות\nאנרגיה\n39.4\nגרם\nשומנים\n16.8\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n432\nמג\nנתרן\n31.8\nגרם\nסך הפחמימות\n7.2\nגרם\nסוכרים מתוך פחמימות\n1.75\nמתוכן כפיות סוכר\n23.3\nגרם\nחלבונים"
+  },
+  {
+    "category": "פיצוחים קלויים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566183/small.jpg",
+    "ingredients": "פיסטוק, מלח, מים, קמח תפו\"א.",
+    "barcode": 7290018566183,
+    "name": "רמי לוי שקד קלוי",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "575\nקלוריות\nאנרגיה\n39.4\nגרם\nשומנים\n16.8\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n432\nמג\nנתרן\n31.8\nגרם\nסך הפחמימות\n7.2\nגרם\nסוכרים מתוך פחמימות\n1.75\nמתוכן כפיות סוכר\n23.3\nגרם\nחלבונים"
+  },
+  {
+    "category": "פיצוחים קלויים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566282/small.jpg",
+    "ingredients": "פיסטוק, מלח, מים, קמח תפו\"א.",
+    "barcode": 7290018566282,
+    "name": "רמי לוי פיסטוק קלוי",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "575\nקלוריות\nאנרגיה\n39.4\nגרם\nשומנים\n16.8\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n432\nמג\nנתרן\n31.8\nגרם\nסך הפחמימות\n7.2\nגרם\nסוכרים מתוך פחמימות\n1.75\nמתוכן כפיות סוכר\n23.3\nגרם\nחלבונים"
+  },
+  {
+    "category": "פיצוחים קלויים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566251/small.jpg",
+    "ingredients": "פיסטוק, מלח, מים, קמח תפו\"א.",
+    "barcode": 7290018566251,
+    "name": "רמי לוי גרעיני דלעת קלויים",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "575\nקלוריות\nאנרגיה\n39.4\nגרם\nשומנים\n16.8\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n432\nמג\nנתרן\n31.8\nגרם\nסך הפחמימות\n7.2\nגרם\nסוכרים מתוך פחמימות\n1.75\nמתוכן כפיות סוכר\n23.3\nגרם\nחלבונים"
+  },
+  {
+    "category": "פיצוחים קלויים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566244/small.jpg",
+    "ingredients": "גרעיני חמניה , מלח, מים",
+    "barcode": 7290018566244,
+    "name": "גרעיני חמניה",
+    "company": "קליית השיקמה",
+    "nutritionalValues": "477\nקלוריות\nאנרגיה\n19.8\nגרם\nשומנים\n3.9\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n484\nמג\nנתרן\n58\nגרם\nסך הפחמימות\n1.4\nגרם\nסוכרים מתוך פחמימות\n16.7\nגרם\nחלבונים"
+  },
+  {
+    "category": "פיצוחים קלויים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566350/small.jpg",
+    "ingredients": "פיסטוק, מלח, מים, קמח תפו\"א.",
+    "barcode": 7290018566350,
+    "name": "רמי לוי גרעיני אבטיח קלויים במחבת",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "575\nקלוריות\nאנרגיה\n39.4\nגרם\nשומנים\n16.8\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n432\nמג\nנתרן\n31.8\nגרם\nסך הפחמימות\n7.2\nגרם\nסוכרים מתוך פחמימות\n1.75\nמתוכן כפיות סוכר\n23.3\nגרם\nחלבונים"
+  },
+  {
+    "category": "פיצוחים קלויים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566343/small.jpg",
+    "ingredients": "פיסטוק, מלח, מים, קמח תפו\"א.",
+    "barcode": 7290018566343,
+    "name": "רמי לוי גרעיני אבטיח קלויים במלח",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "575\nקלוריות\nאנרגיה\n39.4\nגרם\nשומנים\n16.8\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n432\nמג\nנתרן\n31.8\nגרם\nסך הפחמימות\n7.2\nגרם\nסוכרים מתוך פחמימות\n1.75\nמתוכן כפיות סוכר\n23.3\nגרם\nחלבונים"
+  },
+  {
+    "category": "פיצוחים קלויים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566756/small.jpg",
+    "ingredients": "גרעיני חמניה , מלח, מים",
+    "barcode": 7290018566756,
+    "name": "גרעיני חמניה",
+    "company": "קליית השיקמה",
+    "nutritionalValues": "477\nקלוריות\nאנרגיה\n19.8\nגרם\nשומנים\n3.9\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n484\nמג\nנתרן\n58\nגרם\nסך הפחמימות\n1.4\nגרם\nסוכרים מתוך פחמימות\n16.7\nגרם\nחלבונים"
+  },
+  {
+    "category": "פיצוחים קלויים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566749/small.jpg",
+    "barcode": 7290018566749,
+    "name": "גרעיני חמניה",
+    "company": "קליית השיקמה"
+  },
+  {
+    "category": "פיצוחים קלויים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290003142477/small.jpg",
+    "ingredients": "ערמונים",
+    "barcode": 7290003142477,
+    "name": "ערמונים קלויים",
+    "company": "קליית גת",
+    "nutritionalValues": "197\nקלוריות\nאנרגיה\n4\nגרם\nחלבונים\n43\nגרם\nסך הפחמימות\n9.1\nגרם\nסוכרים מתוך פחמימות\n5.9\nגרם\nסיבים תזונתיים\n1\nגרם\nשומנים\n0.1\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\nL 2.5\nמג\nכולסטרול\n1.2\nמג\nנתרן"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566985/small.jpg",
+    "ingredients": "משמש מיובש (16%) (משמש מיובש, חומר משמר (E220 דו תחמוצת הגפרית), שזיף מגולען מיובש (16%), (שזיף, שמן חמניות, חומר משמר (E220 \"דו תחמוצת הגפרית), תמר (16%), חמוציות מסוכרות (14.7%) (חמוציות, סוכר לבן, שמן חמניות),צימוק בהיר (13.3%) (צימוק בהיר, חומר משמר (E220 דו תחמוצת הגפרית), Lוקדים (13.3%), אגוזי מלך (10.7%).",
+    "barcode": 7290018566985,
+    "name": "מגש אירוח פרי הארץ תערובת פירות יבשים",
+    "company": "קליית השיקמה רמי לוי",
+    "nutritionalValues": "418\nקלוריות\nאנרגיה\n15\nגרם\nשומנים\n0.6\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n6\nמג\nנתרן\n61.6\nגרם\nסך הפחמימות\n45\nגרם\nסוכרים מתוך פחמימות\n11.25\nמתוכן כפיות סוכר\n5.8\nגרם\nסיבים תזונתיים\n6\nגרם\nחלבונים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566794/small.jpg",
+    "ingredients": "דלעת קלוף (12.5%), שקד טבעי (12.5%), קשיו טבעי (12.5%), חמוציות ברנז תפוחים ( 12.5%( (חמצן שמן צמחי [חמניות], רכז תפוחים), צימוקים ( צימוקים (12.5%), חומר משמר (E220), פקאן טבעי (12.5%), אגוז מלך (12.5%), שקד מולבן (12.5%).",
+    "barcode": 7290018566794,
+    "name": "מיקס אגוזים, גרעינים ופירות יבשים",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "646\nקלוריות\nאנרגיה\n47.8\nגרם\nשומנים\n6\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n6\nמג\nנתרן\n35\nגרם\nסך הפחמימות\n18.5\nגרם\nסוכרים מתוך פחמימות\n4.5\nמתוכן כפיות סוכר\n15.6\nגרם\nחלבונים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566459/small.jpg",
+    "ingredients": "פקאן,סוכר,שומן צמחי.",
+    "barcode": 7290018566459,
+    "name": "פקאן סיני מסוכר",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "641\nקלוריות\nאנרגיה\n54\nגרם\nשומנים\n5.3\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n8\nמג\nנתרן\n34\nגרם\nסך הפחמימות\n28\nגרם\nסוכרים מתוך פחמימות\n7\nמתוכן כפיות סוכר\n5.6\nגרם\nסיבים תזונתיים\n10.4\nגרם\nחלבונים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566503/small.jpg",
+    "ingredients": "אננס מיובש",
+    "barcode": 7290018566503,
+    "name": "אננס מיובש",
+    "company": "קליית השיקמה- רמי לוי",
+    "nutritionalValues": "305\nקלוריות\nאנרגיה\nL 0.1\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n65\nגרם\nסך הפחמימות\n62.3\nגרם\nסוכרים מתוך פחמימות\n3.5\nגרם\nסיבים תזונתיים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566596/small.jpg",
+    "ingredients": "קוקוס מיובש",
+    "barcode": 7290018566596,
+    "name": "קוקוס מיובש",
+    "company": "קליית השיקמה- רמי לוי",
+    "nutritionalValues": "729\nקלוריות\nאנרגיה\n68\nגרם\nשומנים\n63.2\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n10\nמג\nנתרן\n24.5\nגרם\nסך הפחמימות\n6.1\nגרם\nסוכרים מתוך פחמימות\n14.8\nגרם\nסיבים תזונתיים\n3.5\nגרם\nחלבונים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566497/small.jpg",
+    "ingredients": "צימוק כהה טבעי",
+    "barcode": 7290018566497,
+    "name": "צימוק כהה טבעי",
+    "company": "קליית השיקמה- רמי לוי",
+    "nutritionalValues": "288\nקלוריות\nאנרגיה\nL 0.5\nגרם\nחומצות שומן טראנס\n21\nמג\nנתרן\n67.3\nגרם\nסך הפחמימות\n52.5\nגרם\nסוכרים מתוך פחמימות\n13\nמתוכן כפיות סוכר\n2\nגרם\nסיבים תזונתיים\n4.1\nגרם\nחלבונים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566381/small.jpg",
+    "ingredients": "מנגו מיובש",
+    "barcode": 7290018566381,
+    "name": "מנגו מיובש",
+    "company": "קליית השיקמה- רמי לוי",
+    "nutritionalValues": "320\nקלוריות\nאנרגיה\nL 0.5\nגרם\nחומצות שומן טראנס\n72.5\nגרם\nסך הפחמימות\n52.5\nגרם\nסוכרים מתוך פחמימות\n5\nגרם\nסיבים תזונתיים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566367/small.jpg",
+    "barcode": 7290018566367,
+    "name": "שזיף מיובש",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "268\nקלוריות\nאנרגיה\n0.8\nגרם\nשומנים\nL 0.5\nגרם\nחומצות שומן טראנס\n56.5\nגרם\nסך הפחמימות\n37.9\nגרם\nסוכרים מתוך פחמימות\n9.5\nמתוכן כפיות סוכר\n56.4\nגרם\nסיבים תזונתיים\n12.1\nגרם\nחלבונים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566121/small.jpg",
+    "ingredients": "חמוציות, סוכר, שמן חמניות",
+    "barcode": 7290018566121,
+    "name": "חמוציות מסוכרות",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "326\nקלוריות\nאנרגיה\n0.8\nגרם\nשומנים\nL 0.1\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n4.2\nמג\nנתרן\n79.5\nגרם\nסך הפחמימות\n69.4\nגרם\nסוכרים מתוך פחמימות\n17.25\nמתוכן כפיות סוכר\n6.2\nגרם\nסיבים תזונתיים\n0.2\nגרם\nחלבונים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566091/small.jpg",
+    "barcode": 7290018566091,
+    "name": "צימוק בהיר",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "560\nקלוריות\nאנרגיה\n47.5\nגרם\nשומנים\n12\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n30\nמג\nנתרן\n20\nגרם\nסך הפחמימות\n2\nגרם\nסוכרים מתוך פחמימות\n1.8\nגרם\nסיבים תזונתיים\n24\nגרם\nחלבונים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566084/small.jpg",
+    "barcode": 7290018566084,
+    "name": "משמש מיובש",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "249\nקלוריות\nאנרגיה\n0.9\nגרם\nשומנים\nL 0.5\nגרם\nחומצות שומן טראנס\n10\nמג\nנתרן\n63.8\nגרם\nסך הפחמימות\n48\nגרם\nסוכרים מתוך פחמימות\n12\nמתוכן כפיות סוכר\n9.8\nגרם\nסיבים תזונתיים\n3.3\nגרם\nחלבונים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566480/small.jpg",
+    "ingredients": "פיסטוק, מלח, מים, קמח תפו\"א.",
+    "barcode": 7290018566480,
+    "name": "רמי לוי פקאן מסוכר",
+    "company": "רמי לוי שיווק השקמה",
+    "nutritionalValues": "575\nקלוריות\nאנרגיה\n39.4\nגרם\nשומנים\n16.8\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n432\nמג\nנתרן\n31.8\nגרם\nסך הפחמימות\n7.2\nגרם\nסוכרים מתוך פחמימות\n1.75\nמתוכן כפיות סוכר\n23.3\nגרם\nחלבונים"
+  },
+  {
+    "category": "פירות יבשים",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/031200001597/small.jpg",
+    "ingredients": "חמוציות 65%, סוכר 34.5%, שמן חמניות מזוכך.",
+    "barcode": 31200001597,
+    "name": "חמוציות ממותקים ומיובשים",
+    "company": "אושן ספריי",
+    "nutritionalValues": "333\nקלוריות\nאנרגיה\n0.7\nגרם\nשומנים\n0\nמג\nנתרן\n75\nגרם\nסך הפחמימות\n74\nגרם\nסוכרים מתוך פחמימות\n18.5\nמתוכן כפיות סוכר\n7.6\nגרם\nסיבים תזונתיים\n0\nגרם\nחלבונים"
+  },
+  {
+    "category": "מנצ'ס",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566473/small.jpg",
+    "ingredients": "אפונה ירוקה, שומן צמחי, מלח בתוספת יוד, צבעי מאכל, בריליאנט בלו.",
+    "barcode": 7290018566473,
+    "name": "אפונה קלויה",
+    "company": "קליית השיקמה",
+    "nutritionalValues": "427\nקלוריות\nאנרגיה\n14.7\nגרם\nשומנים\n5.65\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n667\nמג\nנתרן\n42.17\nגרם\nסך הפחמימות\n3.3\nגרם\nסוכרים מתוך פחמימות\n0.75\nמתוכן כפיות סוכר\n23.2\nגרם\nחלבונים"
+  },
+  {
+    "category": "מנצ'ס",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566572/small.jpg",
+    "ingredients": "בוטנים, קמח חיטה, סוכרים, מסמיך, מךח, מתחלב, חלבון צמחי מעובד, מווסת חומציות.",
+    "barcode": 7290018566572,
+    "name": "בוטנים מצופים",
+    "company": "קליית השיקמה",
+    "nutritionalValues": "433\nקלוריות\nאנרגיה\n23\nגרם\nשומנים\n4.8\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n495\nמג\nנתרן\n41\nגרם\nסך הפחמימות\n12.4\nגרם\nסוכרים מתוך פחמימות\n3\nמתוכן כפיות סוכר\n15.6\nגרם\nחלבונים"
+  },
+  {
+    "category": "מנצ'ס",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566763/small.jpg",
+    "ingredients": "אורז, בוטנים, עמילן תפוחי אדמה, עמילן תירס, עמילן חיטה, קמח חיטה, קמח חיטה, רוטב סויה, חיטה, שמן חמניות, סוכר לבן, מלח, אבקת סוכר, מלטודקסטרין, תבלינים(פפריקה, פלפל קאיין, פלפל צ'ילי, כמון, כורכום, פלפל שחור, כוסברה, חלבה, פלפל חלפיניו, זרעי שומר) אצת נורי, מחזק בטעם גלוטומט, אבקת בצל, אבקת ביציםן, פירורי לחם, מעכב חמצון, תמציות תבלינים, הידרוליזט חלבון צמחי, בזיליקום, מווסת חומציות.",
+    "barcode": 7290018566763,
+    "name": "מנצ'ס",
+    "company": "קליית השיקמה",
+    "nutritionalValues": "476\nקלוריות\nאנרגיה\n19.9\nגרם\nשומנים\n3.1\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n448\nמג\nנתרן\n59\nגרם\nסך הפחמימות\n4.2\nגרם\nסוכרים מתוך פחמימות\n1\nמתוכן כפיות סוכר\n13.5\nגרם\nחלבונים"
+  },
+  {
+    "category": "מנצ'ס",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566558/small.jpg",
+    "ingredients": "אורז, בוטנים, עמילן תפוחי אדמה, עמילן תירס, עמילן חיטה, קמח חיטה, קמח חיטה, רוטב סויה, חיטה, שמן חמניות, סוכר לבן, מלח, אבקת סוכר, מלטודקסטרין, תבלינים(פפריקה, פלפל קאיין, פלפל צ'ילי, כמון, כורכום, פלפל שחור, כוסברה, חלבה, פלפל חלפיניו, זרעי שומר) אצת נורי, מחזק בטעם גלוטומט, אבקת בצל, אבקת ביציםן, פירורי לחם, מעכב חמצון, תמציות תבלינים, הידרוליזט חלבון צמחי, בזיליקום, מווסת חומציות.",
+    "barcode": 7290018566558,
+    "name": "מנצ'ס",
+    "company": "קליית השיקמה",
+    "nutritionalValues": "476\nקלוריות\nאנרגיה\n19.9\nגרם\nשומנים\n3.1\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n448\nמג\nנתרן\n59\nגרם\nסך הפחמימות\n4.2\nגרם\nסוכרים מתוך פחמימות\n1\nמתוכן כפיות סוכר\n13.5\nגרם\nחלבונים"
+  },
+  {
+    "category": "מנצ'ס",
+    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018566466/small.jpg",
+    "ingredients": "אורז, שמן צמחי, סוכר, מסמיך, רוטב סויה, מלח, אבקת שום, אבקת צ'ילי, צבע מאכל, אבקת שוש, מחזקי טעם.",
+    "barcode": 7290018566466,
+    "name": "חטיף אורז בטעם צ'ילי",
+    "company": "קליית השיקמה",
+    "nutritionalValues": "556\nקלוריות\nאנרגיה\n33\nגרם\nשומנים\n16\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n960\nמג\nנתרן\n60\nגרם\nסך הפחמימות\n12\nגרם\nסוכרים מתוך פחמימות\n3\nמתוכן כפיות סוכר\n4.3\nגרם\nחלבונים"
+  }
+]
