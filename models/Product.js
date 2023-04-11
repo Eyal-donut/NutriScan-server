@@ -19,6 +19,10 @@ const ProductSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
+    isLiked: {
+      type: Boolean,
+      default: false,
+    },
     dietValues: {
       "Gluten free": {
         type: String,
