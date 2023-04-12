@@ -14,6 +14,7 @@ const ProductSchema = new mongoose.Schema(
     },
     barcode: {
       type: Number,
+      unique: [true, "Barcode number already exists in the system."]
     },
     company: {
       type: String,
