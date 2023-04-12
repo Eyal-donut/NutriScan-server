@@ -10,7 +10,7 @@ export const getProduct = asyncHandler(async (req, res, next) => {
   console.log(product)
   if (!product) {
     return next(
-      new Error(`product with barcode number ${req.params.barcode} not found`)
+      new Error(`product with barcode number ${req.params.barcode} not found`, 404)
     );
   }
   res.status(200).json({
@@ -25,7 +25,7 @@ export const getProduct = asyncHandler(async (req, res, next) => {
 export const getProducts = asyncHandler(async (req, res, next) => {
   const products = await Product.find();
   if (!products) {
-    return next(new Error(`No products found`));
+    return next(new Error(`No products found`, 404));
   }
   res.status(200).json({
     success: true,
@@ -68,7 +68,7 @@ export const deleteProduct = asyncHandler(async (req, res, next) => {
   const product = await Product.findById(req.params.barcode);
   if (!product) {
     return next(
-      new Error(`product with barcode number ${req.params.barcode} not found`)
+      new Error(`product with barcode number ${req.params.barcode} not found`, 404)
     );
   }
   product.deleteOne();
