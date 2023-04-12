@@ -15,6 +15,10 @@ const ProductSchema = new mongoose.Schema(
     barcode: {
       type: Number,
     },
+    company: {
+      type: String,
+      default: "No information",
+    },
     createdAt: {
       type: Date,
       default: Date.now,
