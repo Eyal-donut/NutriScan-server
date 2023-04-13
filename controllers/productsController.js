@@ -1,5 +1,7 @@
 import asyncHandler from "../middleware/asyncHandler.js";
 import Product from "../models/Product.js";
+import ErrorResponse from "../utils/ErrorResponse.js";
+
 
 // @desc    Get a single product
 // @route   GET /api/v1/products-scanner/products/:barcode

@@ -1,5 +1,6 @@
 import asyncHandler from "../middleware/asyncHandler.js";
 import User from "../models/User.js";
+import ErrorResponse from "../utils/ErrorResponse.js";
 
 // @desc    Get all users, or a single user by email
 // @route   GET /api/v1/products-scanner/users
