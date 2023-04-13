@@ -10,7 +10,7 @@ export const getProduct = asyncHandler(async (req, res, next) => {
   console.log(product)
   if (!product) {
     return next(
-      new Error(`product with barcode number ${req.params.barcode} not found`, 404)
+      new ErrorResponse(`product with barcode number ${req.params.barcode} not found`, 404)
     );
   }
   res.status(200).json({
@@ -25,7 +25,7 @@ export const getProduct = asyncHandler(async (req, res, next) => {
 export const getProducts = asyncHandler(async (req, res, next) => {
   const products = await Product.find();
   if (!products) {
-    return next(new Error(`No products found`, 404));
+    return next(new ErrorResponse(`No products found`, 404));
   }
   res.status(200).json({
     success: true,
@@ -39,7 +39,7 @@ export const getProducts = asyncHandler(async (req, res, next) => {
 export const createProduct = asyncHandler(async (req, res, next) => {
   const product = await Product.create(req.body);
   if (!product) {
-    return next(new Error("Error, product not created!"));
+    return next(new ErrorResponse("Error, product not created!"));
   }
   res.status(200).json({
     success: true,
@@ -53,7 +53,7 @@ export const createProduct = asyncHandler(async (req, res, next) => {
 export const createProducts = asyncHandler(async (req, res, next) => {
   const productsArray = await Product.insertMany(req.body);
   if (!productsArray) {
-    return next(new Error("Error, products not created!"));
+    return next(new ErrorResponse("Error, products not created!"));
   }
   res.status(200).json({
     success: true,
@@ -68,7 +68,7 @@ export const deleteProduct = asyncHandler(async (req, res, next) => {
   const product = await Product.findById(req.params.barcode);
   if (!product) {
     return next(
-      new Error(`product with barcode number ${req.params.barcode} not found`, 404)
+      new ErrorResponse(`product with barcode number ${req.params.barcode} not found`, 404)
     );
   }
   product.deleteOne();

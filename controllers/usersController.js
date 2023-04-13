@@ -15,7 +15,7 @@ export const getUsers = asyncHandler(async (req, res, next) => {
   const users = await User.find(filter);
 
   if (!users || users.length === 0) {
-    return next(new Error("No users found."));
+    return next(new ErrorResponse("No users found."));
   }
   res.status(200).json({
     success: true,
@@ -29,7 +29,7 @@ export const getUsers = asyncHandler(async (req, res, next) => {
 export const getUser = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.params.id);
   if (!user) {
-    return next(new Error(`User with ID ${req.params.id} not found`, 404));
+    return next(new ErrorResponse(`User with ID ${req.params.id} not found`, 404));
   }
   res.status(200).json({
     success: true,
@@ -50,7 +50,7 @@ export const createUser = asyncHandler(async (req, res, next) => {
     role,
   });
   if (!user) {
-    return next(new Error("Error, user not created!"));
+    return next(new ErrorResponse("Error, user not created!"));
   }
   res.status(200).json({
     success: true,
@@ -112,7 +112,7 @@ export const updateUser = asyncHandler(async (req, res, next) => {
     runValidators: true,
   });
   if (!user) {
-    return next(new Error(`User with ID ${req.params.id} not found`, 404));
+    return next(new ErrorResponse(`User with ID ${req.params.id} not found`, 404));
   }
   res.status(200).json({
     success: true,
@@ -126,7 +126,7 @@ export const updateUser = asyncHandler(async (req, res, next) => {
 export const deleteUser = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.params.id);
   if (!user) {
-    return next(new Error(`User with ID ${req.params.id} not found`, 404));
+    return next(new ErrorResponse(`User with ID ${req.params.id} not found`, 404));
   }
   user.deleteOne();
   res.status(200).json({

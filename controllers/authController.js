@@ -177,7 +177,7 @@ export const updateUser = asyncHandler(async (req, res, next) => {
     runValidators: true,
   });
   if (!user) {
-    return next(new Error(`User with ID ${req.params.id} not found`));
+    return next(new ErrorResponse(`Logged user not found.`), 404);
   }
   res.status(200).json({
     success: true,
