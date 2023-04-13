@@ -12,7 +12,7 @@ const ProductSchema = new mongoose.Schema(
     ingredients: {
       type: String,
     },
-    barcode: {
+    code: {
       type: Number,
       unique: [true, "Barcode number already exists in the system."]
     },
