@@ -16,7 +16,7 @@ productsRouter
   .route("/")
   .get(getProducts)
   .post(createProduct)
-  .delete(protect, authorize("admin"), deleteProducts);
+  .delete(deleteProducts);
 
 productsRouter.route("/many").post(createProducts);
 
