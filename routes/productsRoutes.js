@@ -18,11 +18,11 @@ productsRouter
   .post(createProduct)
   .delete(protect, authorize("admin"), deleteProducts);
 
-productsRouter.route("/many").post(protect, authorize("admin"), createProducts);
+productsRouter.route("/many").post(createProducts);
 
 productsRouter
   .route("/:barcode")
   .get(getProduct)
-  .delete(protect, authorize("admin"), deleteProduct);
+  .delete(deleteProduct);
 
 export default productsRouter;
