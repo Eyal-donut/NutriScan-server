@@ -7,9 +7,8 @@ import ErrorResponse from "../utils/ErrorResponse.js";
 // @route   GET /api/v1/products-scanner/products/:barcode
 // @access  Public
 export const getProduct = asyncHandler(async (req, res, next) => {
-  const filter = { barcode: Number(req.params.barcode) };
+  const filter = { code: Number(req.params.barcode) };
   const product = await Product.findOne(filter);
-  console.log(product)
   if (!product) {
     return next(
       new ErrorResponse(`product with barcode number ${req.params.barcode} not found`, 404)
