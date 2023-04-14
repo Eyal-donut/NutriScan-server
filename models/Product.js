@@ -20,6 +20,9 @@ const ProductSchema = new mongoose.Schema(
       type: String,
       default: "No information",
     },
+    category: {
+
+    },
     createdAt: {
       type: Date,
       default: Date.now,
