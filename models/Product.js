@@ -28,6 +28,10 @@ const ProductSchema = new mongoose.Schema(
       type: String,
       default: "Missing information",
     },
+    ingredients: {
+      type: String,
+      maxLength: 1000
+    },
     createdAt: {
       type: Date,
       default: Date.now,
