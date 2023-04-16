@@ -6,6 +6,10 @@ const ProductSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please add a name"],
     },
+    isFood: {
+      type: Boolean,
+      required: [true, "Please state if food"],
+    },
     imageUrl: {
       type: String,
     },
@@ -14,14 +18,15 @@ const ProductSchema = new mongoose.Schema(
     },
     code: {
       type: Number,
-      unique: [true, "Barcode number already exists in the system."]
+      unique: [true, "Barcode number already exists in the system."],
     },
     company: {
       type: String,
-      default: "No information",
+      default: "Missing information",
     },
     category: {
-
+      type: String,
+      default: "Missing information",
     },
     createdAt: {
       type: Date,
@@ -31,56 +36,64 @@ const ProductSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    dietValues: {
-      "Gluten free": {
-        type: String,
-        default: "assessment not possible",
+    settings: {
+      dietPreferences: {
+        "Gluten free": {
+          type: mongoose.Schema.Types.Mixed,
+          default: "Unknown",
+        },
+        "Lactose free": {
+          type: mongoose.Schema.Types.Mixed,
+          default: "Unknown",
+        },
+        Vegan: {
+          type: mongoose.Schema.Types.Mixed,
+          default: "Unknown",
+        },
+        Vegetarian: {
+          type: mongoose.Schema.Types.Mixed,
+          default: "Unknown",
+        },
       },
-      "Lactose free": {
-        type: String,
-        default: "assessment not possible",
+      environmentPreferences: {
+        "silicone & Siloxane": {
+          type: mongoose.Schema.Types.Mixed,
+          default: "Unknown",
+        },
+        Microplastic: {
+          type: mongoose.Schema.Types.Mixed,
+          default: "Unknown",
+        },
+        "Palm oil": {
+          type: mongoose.Schema.Types.Mixed,
+          default: "Unknown",
+        },
       },
-      Vegan: {
-        type: String,
-        default: "assessment not possible",
-      },
-      Vegetarian: {
-        type: String,
-        default: "assessment not possible",
-      },
-    },
-    environmentValues: {
-      "silicone & Siloxane": {
-        type: String,
-        default: "assessment not possible",
-      },
-      Microplastic: {
-        type: String,
-        default: "assessment not possible",
-      },
-      "Palm oil": {
-        type: String,
-        default: "assessment not possible",
-      },
-    },
-    nutritionValues: {
-      Fat: {
-        type: Number,
-      },
-      "Saturated fat": {
-        type: Number,
-      },
-      Cholesterol: {
-        type: Number,
-      },
-      Carbohydrates: {
-        type: Number,
-      },
-      Sugar: {
-        type: Number,
-      },
-      Salt: {
-        type: Number,
+      nutritionPreferences: {
+        Fat: {
+          type: Number,
+          default: -1,
+        },
+        "Saturated fat": {
+          type: Number,
+          default: -1,
+        },
+        Cholesterol: {
+          type: Number,
+          default: -1,
+        },
+        Carbohydrates: {
+          type: Number,
+          default: -1,
+        },
+        Sugar: {
+          type: Number,
+          default: -1,
+        },
+        Salt: {
+          type: Number,
+          default: -1,
+        },
       },
     },
   },
