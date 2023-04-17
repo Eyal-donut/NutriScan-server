@@ -30,7 +30,7 @@ const ProductSchema = new mongoose.Schema(
     },
     ingredients: {
       type: String,
-      maxLength: 1000
+      maxLength: 1000,
     },
     createdAt: {
       type: Date,
@@ -75,28 +75,64 @@ const ProductSchema = new mongoose.Schema(
       },
       nutritionPreferences: {
         Fat: {
-          type: Number,
-          default: -1,
+          val: {
+            type: Number,
+            default: -1,
+          },
+          unit: {
+            type: String,
+            default: "g",
+          },
         },
         "Saturated fat": {
-          type: Number,
-          default: -1,
+          val: {
+            type: Number,
+            default: -1,
+          },
+          unit: {
+            type: String,
+            default: "g",
+          },
         },
         Cholesterol: {
-          type: Number,
-          default: -1,
+          val: {
+            type: Number,
+            default: -1,
+          },
+          unit: {
+            type: String,
+            default: "g",
+          },
         },
         Carbohydrates: {
-          type: Number,
-          default: -1,
+          val: {
+            type: Number,
+            default: -1,
+          },
+          unit: {
+            type: String,
+            default: "g",
+          },
         },
         Sugar: {
-          type: Number,
-          default: -1,
+          val: {
+            type: Number,
+            default: -1,
+          },
+          unit: {
+            type: String,
+            default: "g",
+          },
         },
         Salt: {
-          type: Number,
-          default: -1,
+          val: {
+            type: Number,
+            default: -1,
+          },
+          unit: {
+            type: String,
+            default: "g",
+          },
         },
       },
     },
@@ -116,4 +152,3 @@ const ProductSchema = new mongoose.Schema(
 );
 
 export default mongoose.model("Product", ProductSchema);
-
