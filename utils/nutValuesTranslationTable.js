@@ -1,5 +1,5 @@
 export const translations = {
-    קלוריות: "Calories",
+    קלוריות: "calories",
     אנרגיה: "Energy",
     שומנים: "Fat",
     נתרן: "Sodium",

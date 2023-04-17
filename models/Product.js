@@ -124,7 +124,47 @@ const ProductSchema = new mongoose.Schema(
             default: "g",
           },
         },
-        Salt: {
+        Sodium: {
+          val: {
+            type: Number,
+            default: -1,
+          },
+          unit: {
+            type: String,
+            default: "g",
+          },
+        },
+        Energy: {
+          val: {
+            type: Number,
+            default: -1,
+          },
+          unit: {
+            type: String,
+            default: "calories",
+          },
+        },
+        "Dietary fibers": {
+          val: {
+            type: Number,
+            default: -1,
+          },
+          unit: {
+            type: String,
+            default: "g",
+          },
+        },
+        Proteins: {
+          val: {
+            type: Number,
+            default: -1,
+          },
+          unit: {
+            type: String,
+            default: "g",
+          },
+        },
+        "Trans fatty acids": {
           val: {
             type: Number,
             default: -1,
