@@ -2,7 +2,7 @@ import asyncHandler from "../middleware/asyncHandler.js";
 import Product from "../models/Product.js";
 import ErrorResponse from "../utils/ErrorResponse.js";
 import { translateAndEdit } from "../utils/translate product/translateApi.js";
-
+import { setDieAndEnvironmentSettings } from "../utils/setProductSettings.js";
 
 // @desc    Get a single product
 // @route   GET /api/v1/products-scanner/products/:barcode
@@ -12,7 +12,10 @@ export const getProduct = asyncHandler(async (req, res, next) => {
   const product = await Product.findOne(filter);
   if (!product) {
     return next(
-      new ErrorResponse(`product with barcode number ${req.params.barcode} not found`, 404)
+      new ErrorResponse(
+        `product with barcode number ${req.params.barcode} not found`,
+        404
+      )
     );
   }
   res.status(200).json({
@@ -39,10 +42,14 @@ export const getProducts = asyncHandler(async (req, res, next) => {
 // @route   POST /api/v1/products-scanner/products
 // @access  Public
 export const createProduct = asyncHandler(async (req, res, next) => {
+  const translatedProduct = await translateAndEdit(
+    req.body,
+    "Bread and Pastries"
+  );
+  console.log(translatedProduct)
+  const editedProduct = setDieAndEnvironmentSettings(translatedProduct);
 
- const editedProduct =  await translateAndEdit(req.body, "Bread and Pastries")
- 
- console.log(editedProduct)
+  console.log(editedProduct);
   const product = await Product.create(editedProduct);
   if (!product) {
     return next(new ErrorResponse("Error, product not created!"));
@@ -88,7 +95,10 @@ export const deleteProduct = asyncHandler(async (req, res, next) => {
   const product = await Product.findById(req.params.barcode);
   if (!product) {
     return next(
-      new ErrorResponse(`product with barcode number ${req.params.barcode} not found`, 404)
+      new ErrorResponse(
+        `product with barcode number ${req.params.barcode} not found`,
+        404
+      )
     );
   }
   product.deleteOne();

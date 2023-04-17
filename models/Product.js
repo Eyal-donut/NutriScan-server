@@ -60,7 +60,7 @@ const ProductSchema = new mongoose.Schema(
         },
       },
       environmentPreferences: {
-        "silicone & Siloxane": {
+        "Silicone & Siloxane": {
           type: mongoose.Schema.Types.Mixed,
           default: "Unknown",
         },

@@ -24,7 +24,7 @@ export const translateApi = (category, name, company, ingredients) => {
     data: [
       { text: category },
       { text: name },
-      { text: company },
+      { text: company, translation: { context: "Name" } },
       { text: ingredients },
     ],
     responseType: "json",
@@ -48,6 +48,20 @@ export const translateApi = (category, name, company, ingredients) => {
 };
 
 export const translateAndEdit = async (product, section) => {
+  const settings = {
+    environmentPreferences: {
+      "Silicone & Siloxane": "Unknown",
+      Microplastic: "Unknown",
+      "Palm oil": "Unknown",
+    },
+    dietPreferences: {
+      "Gluten free": "Unknown",
+      "Lactose free": "Unknown",
+      Vegan: "Unknown",
+      Vegetarian: "Unknown",
+    },
+  };
+
   try {
     let {
       category,
@@ -59,33 +73,38 @@ export const translateAndEdit = async (product, section) => {
       imageURL,
     } = product;
 
-    let editedProduct = { imageURL, section, settings: {}, code: barcode };
+    let editedProduct = {
+      imageUrl: imageURL,
+      section,
+      settings,
+      code: barcode,
+    };
 
     if (nutritionalValues) {
       editedProduct.settings.nutritionPreferences =
         translateNutValues(nutritionalValues);
     }
 
-    // if (!category) {
-    //   category = "Missing information";
-    // }
-    // if (!name) {
-    //   name = "Missing information";
-    // }
-    // if (!company) {
-    //   name = "Missing information";
-    // }
-    // if (!ingredients) {
-    //   ingredients = "Missing information";
-    // }
-    // const translateInfo = await translateApi(
-    //   category,
-    //   name,
-    //   company,
-    //   ingredients
-    // );
+    if (!category) {
+      category = "Missing information";
+    }
+    if (!name) {
+      name = "Missing information";
+    }
+    if (!company) {
+      name = "Missing information";
+    }
+    if (!ingredients) {
+      ingredients = "Missing information";
+    }
+    const translateInfo = await translateApi(
+      category,
+      name,
+      company,
+      ingredients
+    );
 
-    // editedProduct = { ...editedProduct, ...translateInfo };
+    editedProduct = { ...editedProduct, ...translateInfo };
     return editedProduct;
   } catch (error) {
     console.error(error);

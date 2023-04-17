@@ -1,4 +1,4 @@
-import { translations } from "../nutValuesTranslationTable.js";
+import { nutValuesTranslationsArray } from "../constants.js";
 
 export const translateNutValues = (nutValues) => {
   const regex = /\n\d+(\.\d+)?\nמתוכן כפיות סוכר/;
@@ -12,30 +12,17 @@ export const translateNutValues = (nutValues) => {
     const units = arr[i + 1].trim();
     const name = arr[i + 2]?.trim() || undefined;
 
-    if (translations[name]) {
-      result[translations[name]] = {
+    if (nutValuesTranslationsArray[name]) {
+      result[nutValuesTranslationsArray[name]] = {
         val: val,
-        units: translations[units] || units,
+        units: nutValuesTranslationsArray[units] || units,
       };
 
-      // result.push({
-      //   [translations[name]]: {
-      //     val: val,
-      //     units: translations[units] || units,
-      //   },
-      // });
     } else {
       result[name] = {
         val: val,
-        units: translations[units] || units,
+        units: nutValuesTranslationsArray[units] || units,
       };
-
-      // result.push({
-      //   [name]: {
-      //     val: val,
-      //     units: translations[units] || units,
-      //   },
-      // });
     }
   }
   return result;
