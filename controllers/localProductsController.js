@@ -1,4 +1,5 @@
 import fs from "fs";
+import { translateApi } from "../utils/translateApi.js";
 
 const createProductLocally = (prod) => {
   const products = loadProducts();
@@ -26,4 +27,28 @@ const saveProducts = (products) => {
   fs.writeFileSync("products.json", dataJSON);
 };
 
-export { createProductLocally }
+const translateAndCreateJson = async (productJson) => {
+  try {
+    let { category, name, company, ingredients } = JSON.parse(product);
+    if (!category) {
+      category = "";
+    }
+    if (!name) {
+      name = "";
+    }
+    if (!company) {
+      name = "";
+    }
+    if (!ingredients) {
+      ingredients = "";
+    }
+    const translateInfo = await translateApi(
+      category,
+      name,
+      company,
+      ingredients
+    );
+  } catch (error) {}
+};
+
+export { createProductLocally };
