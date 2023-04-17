@@ -1,6 +1,7 @@
 import asyncHandler from "../middleware/asyncHandler.js";
 import Product from "../models/Product.js";
 import ErrorResponse from "../utils/ErrorResponse.js";
+import { translateAndEdit } from "../utils/translate product/translateApi.js";
 
 
 // @desc    Get a single product
@@ -38,8 +39,11 @@ export const getProducts = asyncHandler(async (req, res, next) => {
 // @route   POST /api/v1/products-scanner/products
 // @access  Public
 export const createProduct = asyncHandler(async (req, res, next) => {
-  console.log("hi")
-  const product = await Product.create(req.body);
+
+ const editedProduct =  await translateAndEdit(req.body, "Bread and Pastries")
+ 
+ console.log(editedProduct)
+  const product = await Product.create(editedProduct);
   if (!product) {
     return next(new ErrorResponse("Error, product not created!"));
   }
@@ -51,17 +55,17 @@ export const createProduct = asyncHandler(async (req, res, next) => {
 // @desc    Create a product
 // @route   POST /api/v1/products-scanner/products
 // @access  Public
-export const createProductNew = asyncHandler(async (req, res, next) => {
-  console.log("hi")
-  const product = await Product.create(req.body);
-  if (!product) {
-    return next(new ErrorResponse("Error, product not created!"));
-  }
-  res.status(200).json({
-    success: true,
-    data: product,
-  });
-});
+// export const translateAndCreateProduct = asyncHandler(async (req, res, next) => {
+
+//   const product = await Product.create(req.body);
+//   if (!product) {
+//     return next(new ErrorResponse("Error, product not created!"));
+//   }
+//   res.status(200).json({
+//     success: true,
+//     data: product,
+//   });
+// });
 
 // @desc    Create many products
 // @route   POST /api/v1/products-scanner/products/many
