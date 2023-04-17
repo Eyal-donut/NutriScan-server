@@ -138,8 +138,6 @@ const performScraping = async () => {
             productObj = { ...productObj, nutritionalValues: nutValuesText };
           }
 
-          // productsArray.push(productObj);
-          // console.log(productsArray);
           createProductLocally(productObj);
 
           await page.click(selectors.modalExitSelector);
