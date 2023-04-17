@@ -38,6 +38,21 @@ export const getProducts = asyncHandler(async (req, res, next) => {
 // @route   POST /api/v1/products-scanner/products
 // @access  Public
 export const createProduct = asyncHandler(async (req, res, next) => {
+  console.log("hi")
+  const product = await Product.create(req.body);
+  if (!product) {
+    return next(new ErrorResponse("Error, product not created!"));
+  }
+  res.status(200).json({
+    success: true,
+    data: product,
+  });
+});
+// @desc    Create a product
+// @route   POST /api/v1/products-scanner/products
+// @access  Public
+export const createProductNew = asyncHandler(async (req, res, next) => {
+  console.log("hi")
   const product = await Product.create(req.body);
   if (!product) {
     return next(new ErrorResponse("Error, product not created!"));
