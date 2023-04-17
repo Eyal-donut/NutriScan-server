@@ -4,7 +4,7 @@ const ProductSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, "Please add a name"],
+      default: "Missing information",
     },
     isFood: {
       type: Boolean,

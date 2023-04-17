@@ -1,5 +1,6 @@
 import fs from "fs";
 import { translateApi } from "../utils/translateApi.js";
+import {translateNutValues} from "../utils/translateNutValues.js"
 
 const createProductLocally = (prod) => {
   const products = loadProducts();
@@ -29,18 +30,18 @@ const saveProducts = (products) => {
 
 const translateAndCreateJson = async (productJson) => {
   try {
-    let { category, name, company, ingredients } = JSON.parse(product);
+    let { category, name, company, ingredients, nutritionalValues } = JSON.parse(product);
     if (!category) {
-      category = "";
+      category = "Missing information";
     }
     if (!name) {
-      name = "";
+      name = "Missing information";
     }
     if (!company) {
-      name = "";
+      name = "Missing information";
     }
     if (!ingredients) {
-      ingredients = "";
+      ingredients = "Missing information";
     }
     const translateInfo = await translateApi(
       category,
@@ -48,6 +49,10 @@ const translateAndCreateJson = async (productJson) => {
       company,
       ingredients
     );
+    if (nutritionalValues){
+
+    }
+
   } catch (error) {}
 };
 

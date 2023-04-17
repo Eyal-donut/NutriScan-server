@@ -1,30 +1,7 @@
-const nutValues =
-  "400\nקלוריות\nאנרגיה\n6.6\nגרם\nשומנים\n1.1\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n0\nמג\nכולסטרול\n594\nמג\nנתרן\n83.8\nגרם\nסך הפחמימות\n30\nגרם\nסוכרים מתוך פחמימות\n7.5\nמתוכן כפיות סוכר\n3.7\nגרם\nסיבים תזונתיים\n5.5\nגרם\nחלבונים\n92\nמג\nסידן\n116\nמג\nזרחן\n55\nמג\nמגנזיום\n3.2\nמג\nברזל";
+import { translations } from "./nutValuesTranslationTable.js";
 
-const translateNutValues = (nutValues) => {
-  const translatedValues = [];
-
-  const translations = {
-    קלוריות: "Calories",
-    אנרגיה: "Energy",
-    שומנים: "Fat",
-    נתרן: "Sodium",
-    מלח: "Sodium",
-    מלחים: "Sodium",
-    "סך הפחמימות": "Carbohydrates",
-    "סוכרים מתוך פחמימות": "Sugar",
-    "סיבים תזונתיים": "Dietary fibers",
-    חלבונים: "Proteins",
-    גרם: "g",
-    מג: "mg",
-    סידן: "Calcium",
-    ברזל: "Iron",
-    מגנזיום: "Magnesium",
-    זרחן: "Potassium",
-    "חומצות שומן טראנס": "Trans fatty acids",
-    "חומצות שומן רוויות": "Saturated fat",
-    כולסטרול: "Cholesterol",
-  };
+export const translateNutValues = (nutValues) => {
+  
   const regex = /\n\d+(\.\d+)?\nמתוכן כפיות סוכר/;
 
   const removedSugarSpoonsValue = nutValues.replace(regex, "");
@@ -50,7 +27,5 @@ const translateNutValues = (nutValues) => {
       });
     }
   }
-  console.log(result);
   return result;
 };
-translateNutValues(nutValues);
