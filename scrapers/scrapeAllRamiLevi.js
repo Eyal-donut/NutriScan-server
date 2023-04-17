@@ -35,7 +35,6 @@ const performScraping = async () => {
 
       let header;
       let productObj = {};
-      // const productsArray = [];
 
       for (let category of categories) {
         header = await category.$eval(selectors.categoryHeaderSelector, (el) =>
