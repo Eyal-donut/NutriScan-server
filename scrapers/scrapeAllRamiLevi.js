@@ -3,7 +3,7 @@ import colors from "colors";
 import autoScroll from "./scrape utils/autoScroll.js";
 import { wait } from "./scrape utils/wait.js";
 import { selectors } from "./constants.js";
-import { createProductLocally } from "./local database/products.js";
+import { createProductLocally } from "../controllers/localProductsController.js";
 
 const performScraping = async () => {
   const browser = await puppeteer.launch({
