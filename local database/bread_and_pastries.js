@@ -1,4 +1,4 @@
-[
+export const breadAndPastries = [
   {
     "category": "לחמים",
     "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018500408/small.jpg",

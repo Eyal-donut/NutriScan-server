@@ -6,10 +6,6 @@ const ProductSchema = new mongoose.Schema(
       type: String,
       default: "Missing information",
     },
-    isFood: {
-      type: Boolean,
-      required: [true, "Please state if food"],
-    },
     imageUrl: {
       type: String,
     },
@@ -25,6 +21,10 @@ const ProductSchema = new mongoose.Schema(
       default: "Missing information",
     },
     category: {
+      type: String,
+      default: "Missing information",
+    },
+    section: {
       type: String,
       default: "Missing information",
     },
@@ -79,7 +79,7 @@ const ProductSchema = new mongoose.Schema(
             type: Number,
             default: -1,
           },
-          unit: {
+          units: {
             type: String,
             default: "g",
           },
@@ -89,7 +89,7 @@ const ProductSchema = new mongoose.Schema(
             type: Number,
             default: -1,
           },
-          unit: {
+          units: {
             type: String,
             default: "g",
           },
@@ -99,7 +99,7 @@ const ProductSchema = new mongoose.Schema(
             type: Number,
             default: -1,
           },
-          unit: {
+          units: {
             type: String,
             default: "g",
           },
@@ -109,7 +109,7 @@ const ProductSchema = new mongoose.Schema(
             type: Number,
             default: -1,
           },
-          unit: {
+          units: {
             type: String,
             default: "g",
           },
@@ -119,7 +119,7 @@ const ProductSchema = new mongoose.Schema(
             type: Number,
             default: -1,
           },
-          unit: {
+          units: {
             type: String,
             default: "g",
           },
@@ -129,7 +129,7 @@ const ProductSchema = new mongoose.Schema(
             type: Number,
             default: -1,
           },
-          unit: {
+          units: {
             type: String,
             default: "g",
           },
@@ -139,7 +139,7 @@ const ProductSchema = new mongoose.Schema(
             type: Number,
             default: -1,
           },
-          unit: {
+          units: {
             type: String,
             default: "calories",
           },
@@ -149,7 +149,7 @@ const ProductSchema = new mongoose.Schema(
             type: Number,
             default: -1,
           },
-          unit: {
+          units: {
             type: String,
             default: "g",
           },
@@ -159,7 +159,7 @@ const ProductSchema = new mongoose.Schema(
             type: Number,
             default: -1,
           },
-          unit: {
+          units: {
             type: String,
             default: "g",
           },
@@ -169,7 +169,7 @@ const ProductSchema = new mongoose.Schema(
             type: Number,
             default: -1,
           },
-          unit: {
+          units: {
             type: String,
             default: "g",
           },
