@@ -1,4 +1,4 @@
-export const breadAndPastries = [
+[
   {
     "category": "לחמים",
     "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018500408/small.jpg",
@@ -650,15 +650,7 @@ export const breadAndPastries = [
     "company": "EXTRA",
     "nutritionalValues": "496\nקלוריות\nאנרגיה\n23\nגרם\nשומנים\n2\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n0\nמג\nכולסטרול\n392\nמג\nנתרן\n64\nגרם\nסך הפחמימות\n3.4\nגרם\nסוכרים מתוך פחמימות\n3/4\nמתוכן כפיות סוכר\n2.4\nגרם\nסיבים תזונתיים\n7.8\nגרם\nחלבונים"
   },
-  {
-    "category": "פריכיות",
-    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290002043782/small.jpg",
-    "ingredients": "אורז חום מלא 76%, שמן זית, קמח אורז, מלח, תבלינים, תמצית שמרים, תמצית עשן, שמנים של תבלינים.",
-    "barcode": 7290002043782,
-    "name": "צ'יפס טקסס ברביקיו",
-    "company": "EXTRA",
-    "nutritionalValues": "466\nקלוריות\nאנרגיה\n20\nגרם\nשומנים\n1.2\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n0\nמג\nכולסטרול\n488\nמג\nנתרן\n63\nגרם\nסך הפחמימות\n2.1\nגרם\nסוכרים מתוך פחמימות\n1/2\nמתוכן כפיות סוכר\n2.2\nגרם\nסיבים תזונתיים\n7.3\nגרם\nחלבונים"
-  },
+
   {
     "category": "פריכיות",
     "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290002043331/small.jpg",
@@ -1417,12 +1409,6 @@ export const breadAndPastries = [
     "name": "טורטיה מקמח חיטה 20 ס\"מ",
     "company": "מרקדו טייסט",
     "nutritionalValues": "282\nקלוריות\nאנרגיה\n4.5\nגרם\nשומנים\n2.3\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n0\nמג\nכולסטרול\n450\nמג\nנתרן\n49.3\nגרם\nסך הפחמימות\n5.5\nגרם\nסוכרים מתוך פחמימות\n1.25\nמתוכן כפיות סוכר\n7\nגרם\nסיבים תזונתיים\n7.5\nגרם\nחלבונים"
-  },
-  {
-    "category": "לחמי מאפייה",
-    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/2750963/198770/medium.jpg",
-    "barcode": 2750963,
-    "name": "באגט רוסטיק"
   },
   {
     "category": "לחמי מאפייה",

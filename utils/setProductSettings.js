@@ -48,10 +48,10 @@ const setDietPreferences = (product) => {
 const setEnvironmentPreferences = (product) => {
   const updated = { ...product };
   updated.settings.environmentPreferences["Silicone & Siloxane"] =
-    checkIfNotContainsIngredient(updated, siliconeIngredients);
+    !checkIfNotContainsIngredient(updated, siliconeIngredients);
 
   updated.settings.environmentPreferences["Microplastic"] =
-    checkIfNotContainsIngredient(updated, microPlasticIngredients);
+    !checkIfNotContainsIngredient(updated, microPlasticIngredients);
 
   updated.settings.environmentPreferences["Palm oil"] =
     checkIfPalmOilFree(updated);

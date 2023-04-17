@@ -46,10 +46,8 @@ export const createProduct = asyncHandler(async (req, res, next) => {
     req.body,
     "Bread and Pastries"
   );
-  console.log(translatedProduct)
   const editedProduct = setDieAndEnvironmentSettings(translatedProduct);
 
-  console.log(editedProduct);
   const product = await Product.create(editedProduct);
   if (!product) {
     return next(new ErrorResponse("Error, product not created!"));
@@ -59,34 +57,44 @@ export const createProduct = asyncHandler(async (req, res, next) => {
     data: product,
   });
 });
-// @desc    Create a product
-// @route   POST /api/v1/products-scanner/products
-// @access  Public
-// export const translateAndCreateProduct = asyncHandler(async (req, res, next) => {
-
-//   const product = await Product.create(req.body);
-//   if (!product) {
-//     return next(new ErrorResponse("Error, product not created!"));
-//   }
-//   res.status(200).json({
-//     success: true,
-//     data: product,
-//   });
-// });
 
 // @desc    Create many products
 // @route   POST /api/v1/products-scanner/products/many
 // @access  Private
 export const createProducts = asyncHandler(async (req, res, next) => {
-  const productsArray = await Product.insertMany(req.body);
-  if (!productsArray) {
-    return next(new ErrorResponse("Error, products not created!"));
+  const createdProducts = [];
+  for (let element of req.body) {
+    const translatedProduct = await translateAndEdit(
+      element,
+      "Bread and Pastries"
+    );
+    const editedProduct = setDieAndEnvironmentSettings(translatedProduct);
+    const product = await Product.create(editedProduct);
+    if (!product) {
+      return next(new ErrorResponse("Error, product not created!"));
+    }
+    console.log(product)
+    createdProducts.push(product);
   }
   res.status(200).json({
     success: true,
-    data: productsArray,
+    data: createdProducts,
   });
 });
+
+// // @desc    Create many products
+// // @route   POST /api/v1/products-scanner/products/many
+// // @access  Private
+// export const createProducts = asyncHandler(async (req, res, next) => {
+//   const productsArray = await Product.insertMany(req.body);
+//   if (!productsArray) {
+//     return next(new ErrorResponse("Error, products not created!"));
+//   }
+//   res.status(200).json({
+//     success: true,
+//     data: productsArray,
+//   });
+// });
 
 // @desc    DELETE a single product
 // @route   DELETE /api/v1/products-scanner/products/:barcode
