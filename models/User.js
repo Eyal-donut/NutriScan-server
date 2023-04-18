@@ -55,7 +55,7 @@ const UserSchema = new mongoose.Schema(
         },
       },
       environmentPreferences: {
-        "silicone & Siloxane": {
+        "Silicone & Siloxane": {
           type: Boolean,
           default: false,
         },

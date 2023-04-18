@@ -38,13 +38,15 @@ export const getProducts = asyncHandler(async (req, res, next) => {
   });
 });
 
+const sectionCat = "Bread and Pastries"
+
 // @desc    Create a product
 // @route   POST /api/v1/products-scanner/products
 // @access  Public
 export const createProduct = asyncHandler(async (req, res, next) => {
   const translatedProduct = await translateAndEdit(
     req.body,
-    "Bread and Pastries"
+    sectionCat
   );
   const editedProduct = setDieAndEnvironmentSettings(translatedProduct);
 
@@ -65,7 +67,7 @@ export const createProducts = asyncHandler(async (req, res, next) => {
   const createdProducts = [];
   for (let element of req.body) {
     try {
-      const translatedProduct = await translateAndEdit(element, "Legume, Cereals");
+      const translatedProduct = await translateAndEdit(element, sectionCat);
       const editedProduct = setDieAndEnvironmentSettings(translatedProduct);
       const product = await Product.create(editedProduct);
       // if (!product) {
@@ -103,7 +105,8 @@ export const createProducts = asyncHandler(async (req, res, next) => {
 // @route   DELETE /api/v1/products-scanner/products/:barcode
 // @access  Private
 export const deleteProduct = asyncHandler(async (req, res, next) => {
-  const product = await Product.findById(req.params.barcode);
+  const filter = { code: Number(req.params.barcode) };
+  const product = await Product.findOne(filter);
   if (!product) {
     return next(
       new ErrorResponse(

@@ -7,18 +7,18 @@ import {
   microPlasticIngredients,
 } from "./constants.js";
 
-const checkIfNotContainsIngredient = (product, ingredientsArray) => {
+const checkIfFreeFromIngredient = (product, ingredientsArray) => {
   for (const notWantedIngredient of ingredientsArray) {
     if (product.ingredients.toLowerCase().includes(notWantedIngredient)) {
       return false;
     }
   }
   return true;
-
 };
 
+checkIfFreeFromIngredient({ingredients: "Dark wheat flour (gluten), water, yeast, salt, preservatives (E202 E282), emulsifiers (E471 E481), dietary fiber, pH regulator (E330), antioxidant (E300), enzymes."}, notVeganIngredients)
+
 const checkIfPalmOilFree = (product) => {
- 
   return product.ingredients.toLowerCase().includes("palm oil")
     ? false
     : product.ingredients.toLowerCase().includes("palm-oil")
@@ -29,16 +29,16 @@ const checkIfPalmOilFree = (product) => {
 const setDietPreferences = (product) => {
   const updated = { ...product };
   updated.settings.dietPreferences["Gluten free"] =
-    checkIfNotContainsIngredient(updated, glutenIngredients);
+    checkIfFreeFromIngredient(updated, glutenIngredients);
 
   updated.settings.dietPreferences["Lactose free"] =
-    checkIfNotContainsIngredient(updated, lactoseIngredients);
+    checkIfFreeFromIngredient(updated, lactoseIngredients);
 
-  updated.settings.dietPreferences["Vegan"] = checkIfNotContainsIngredient(
+  updated.settings.dietPreferences["Vegan"] = checkIfFreeFromIngredient(
     updated,
     notVeganIngredients
   );
-  updated.settings.dietPreferences["Vegetarian"] = checkIfNotContainsIngredient(
+  updated.settings.dietPreferences["Vegetarian"] = checkIfFreeFromIngredient(
     updated,
     nonVegetarianIngredients
   );
@@ -48,10 +48,10 @@ const setDietPreferences = (product) => {
 const setEnvironmentPreferences = (product) => {
   const updated = { ...product };
   updated.settings.environmentPreferences["Silicone & Siloxane"] =
-    !checkIfNotContainsIngredient(updated, siliconeIngredients);
+    checkIfFreeFromIngredient(updated, siliconeIngredients);
 
   updated.settings.environmentPreferences["Microplastic"] =
-    !checkIfNotContainsIngredient(updated, microPlasticIngredients);
+    checkIfFreeFromIngredient(updated, microPlasticIngredients);
 
   updated.settings.environmentPreferences["Palm oil"] =
     checkIfPalmOilFree(updated);
