@@ -64,17 +64,20 @@ export const createProduct = asyncHandler(async (req, res, next) => {
 export const createProducts = asyncHandler(async (req, res, next) => {
   const createdProducts = [];
   for (let element of req.body) {
-    const translatedProduct = await translateAndEdit(
-      element,
-      "Bread and Pastries"
-    );
-    const editedProduct = setDieAndEnvironmentSettings(translatedProduct);
-    const product = await Product.create(editedProduct);
-    if (!product) {
-      return next(new ErrorResponse("Error, product not created!"));
+    try {
+      const translatedProduct = await translateAndEdit(element, "Legume, Cereals");
+      const editedProduct = setDieAndEnvironmentSettings(translatedProduct);
+      const product = await Product.create(editedProduct);
+      // if (!product) {
+      //   console.log("Oopsi");
+      // return next(new ErrorResponse("Error, products not created!"))
+      // }
+      console.log(product);
+      createdProducts.push(product);
+    } catch (error) {
+      console.log(`Error processing element: ${element}`, error);
+      continue;
     }
-    console.log(product)
-    createdProducts.push(product);
   }
   res.status(200).json({
     success: true,

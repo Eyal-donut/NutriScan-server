@@ -823,15 +823,7 @@
     "name": "בצק עלים 1 ק\"ג",
     "company": "צנעני"
   },
-  {
-    "category": "בצק קפוא",
-    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290000533353/small.jpg",
-    "ingredients": "קמח חיטה לבן, מים, מרגרינה, סוכר, מלח שולחן",
-    "barcode": 7290000533353,
-    "name": "בצק עלים 1 קג מ.א. א.פ.",
-    "company": "זוגלובק",
-    "nutritionalValues": "357\nקלוריות\nאנרגיה\n21\nגרם\nשומנים\n11\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n0\nמג\nכולסטרול\n205\nמג\nנתרן\n37\nגרם\nסך הפחמימות\n3\nגרם\nסוכרים מתוך פחמימות\n3/4\nמתוכן כפיות סוכר\n0\nגרם\nסיבים תזונתיים\n5\nגרם\nחלבונים"
-  },
+  
   {
     "category": "בצק קפוא",
     "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290006739124/small.jpg",
@@ -939,15 +931,7 @@
     "company": "שלושת האופים",
     "nutritionalValues": "157\nקלוריות\nאנרגיה\n1.6\nגרם\nשומנים\n0.5\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n18\nמג\nכולסטרול\n650\nמג\nנתרן\n31\nגרם\nסך הפחמימות\n3.5\nגרם\nחלבונים"
   },
-  {
-    "category": "מוצרי בצק",
-    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290002603863/small.jpg",
-    "ingredients": "מעטפת ( 50 % ) , מכיל : קמח חיטה לבן בהיר ( מכיל גלוטן ממקור חיטה ) ( 35 % מסך המוצר ) , מים , שמן סויה מזוכך , מלח שולחן . מלית בשר ( 50 % ) , מכיל : מים , בשר בקר חלק ( 8 % מסך המוצר ) , חלבון מן הצומח ( סויה ) , בצל , עמילן מעובד ( 1414 - E ) , מלח שולחן , לתת שעורה , תבלינים ושמני תבלין , מחזק טעם ( מונוסודיום גלוטמט ) . אוטוליזט שמרים , סוכר .",
-    "barcode": 7290002603863,
-    "name": "אמפנדס בשר",
-    "company": "רמי לוי שיווק השקמה",
-    "nutritionalValues": "197\nקלוריות\nאנרגיה\n4\nגרם\nשומנים\n0.8\nגרם\nחומצות שומן רוויות\nL 0.5\nגרם\nחומצות שומן טראנס\n3\nמג\nכולסטרול\n556\nמג\nנתרן\n29\nסך הפחמימות\n1.2\nגרם\nסוכרים מתוך פחמימות\n11.1\nגרם\nחלבונים"
-  },
+  
   {
     "category": "מוצרי בצק",
     "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290002603764/small.jpg",
@@ -1384,15 +1368,7 @@
     "company": "רמי לוי",
     "nutritionalValues": "40\nקלוריות\nאנרגיה\n0.5\nגרם\nשומנים\n22\nמג\nנתרן\n5\nגרם\nסך הפחמימות\n2.8\nגרם\nסוכרים מתוך פחמימות\n0.75\nמתוכן כפיות סוכר\n2.9\nגרם\nסיבים תזונתיים\n2.5\nגרם\nחלבונים"
   },
-  {
-    "category": "ירקות קפואים",
-    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018564127/small.jpg",
-    "ingredients": "קישוא (20%),גזר (34%),תפוחי אדמה(15%),גרגירי חומס (6%),דלעת (10%),סלרי (15%).",
-    "barcode": 7290018564127,
-    "name": "לקט ירקות למרק קוסקוס",
-    "company": "רמי לוי",
-    "nutritionalValues": "42\nקלוריות\nאנרגיה\n0.3\nגרם\nשומנים\nL 0.1\nגרם\nחומצות שומן רוויות\n42\nמג\nנתרן\n7\nסך הפחמימות\n2.6\nגרם\nסוכרים מתוך פחמימות\n16\nגרם\nחלבונים"
-  },
+  
   {
     "category": "ירקות קפואים",
     "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290017297309/small.jpg",
@@ -1523,15 +1499,6 @@
     "name": "שעועית עדינה 600 גרם רמי לוי",
     "company": "רמי לוי",
     "nutritionalValues": "24\nקלוריות\nאנרגיה\n0.3\nגרם\nשומנים\n10\nמג\nנתרן\n1.9\nגרם\nסך הפחמימות\n0.8\nגרם\nסוכרים מתוך פחמימות\n2.6\nגרם\nסיבים תזונתיים\n2.2\nגרם\nחלבונים"
-  },
-  {
-    "category": "ירקות קפואים",
-    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/7290018564042/small.jpg",
-    "ingredients": "שעועית צהובה חתוכה",
-    "barcode": 7290018564042,
-    "name": "רמי לוי שעועית צהובה חתוכה מוקפאת",
-    "company": "רמי לוי שיווק השקמה",
-    "nutritionalValues": "28\nקלוריות\nאנרגיה\n0.2\nגרם\nשומנים\nL 0.1\nגרם\nחומצות שומן רוויות\n20\nנתרן\n3.3\nגרם\nסך הפחמימות\n0.6\nגרם\nסוכרים מתוך פחמימות\n1.9\nגרם\nחלבונים"
   },
   {
     "category": "ירקות קפואים",
@@ -1827,15 +1794,7 @@
     "company": "רמי לוי שיווק השקמה",
     "nutritionalValues": "106\nקלוריות\nאנרגיה\n0\nגרם\nשומנים\n20.9\nגרם\nסך הפחמימות\n14.8\nגרם\nסוכרים מתוך פחמימות\n3.75\nמתוכן כפיות סוכר\n2.4\nגרם\nרב כהלים\n2.6\nגרם\nסיבים תזונתיים\n1.6\nגרם\nחלבונים"
   },
-  {
-    "category": "פירות קפואים",
-    "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/021231829208/small.jpg",
-    "ingredients": "100% דובדבן חמוץ מגולען.",
-    "barcode": 21231829208,
-    "name": "דובדבן חמוץ מגולען מוקפא 100% פרי 500 גרם",
-    "company": "רמי לוי שיווק השקמה",
-    "nutritionalValues": "5\nקלוריות\nאנרגיה\n0\nגרם\nשומנים\n3\nמג\nנתרן\n13\nסך הפחמימות\n6\nגרם\nסוכרים מתוך פחמימות\n4\nגרם\nסיבים תזונתיים\n0\nחלבונים"
-  },
+  
   {
     "category": "פירות קפואים",
     "imageURL": "https://www.rami-levy.co.il/_ipx/w_245,f_webp/https://img.rami-levy.co.il/product/021231828287/small.jpg",
