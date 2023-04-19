@@ -38,7 +38,7 @@ export const getProducts = asyncHandler(async (req, res, next) => {
   });
 });
 
-const sectionCat = "Bread and Pastries"
+const sectionCat = "Organic and Health"
 
 // @desc    Create a product
 // @route   POST /api/v1/products-scanner/products

@@ -153,31 +153,31 @@ export const getCurrentUser = asyncHandler(async (req, res, next) => {
 // @route   PUT /api/v1/auth/update-details
 // @access  Private
 export const updateUser = asyncHandler(async (req, res, next) => {
-  const { dietPreferences, environmentPreferences, nutritionPreferences, name, email } =
-    req.body;
-  const updateObj = {};
+  // const { dietPreferences, environmentPreferences, nutritionPreferences, name, email } =
+  //   req.body;
+  // const updateObj = {};
 
-  if (dietPreferences !== undefined) {
-    updateObj.dietPreferences = dietPreferences;
-  }
-  if (environmentPreferences !== undefined) {
-    updateObj.environmentPreferences = environmentPreferences;
-  }
-  if (nutritionPreferences !== undefined) {
-    updateObj.nutritionPreferences = nutritionPreferences;
-  }
-  if (name !== undefined) {
-    updateObj.name = name;
-  }
-  if (email !== undefined) {
-    updateObj.email = email;
-  }
-  const user = await User.findByIdAndUpdate(req.user.id, updateObj, {
+  // if (dietPreferences !== undefined) {
+  //   updateObj.dietPreferences = dietPreferences;
+  // }
+  // if (environmentPreferences !== undefined) {
+  //   updateObj.environmentPreferences = environmentPreferences;
+  // }
+  // if (nutritionPreferences !== undefined) {
+  //   updateObj.nutritionPreferences = nutritionPreferences;
+  // }
+  // if (name !== undefined) {
+  //   updateObj.name = name;
+  // }
+  // if (email !== undefined) {
+  //   updateObj.email = email;
+  // }
+  const user = await User.findByIdAndUpdate(req.user.id, req.body, {
     new: true,
     runValidators: true,
   });
   if (!user) {
-    return next(new ErrorResponse(`Logged user not found.`), 404);
+    return next(new ErrorResponse(`User not found.`), 404);
   }
   res.status(200).json({
     success: true,
