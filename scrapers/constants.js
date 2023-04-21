@@ -1,7 +1,7 @@
 const QUICK = "https://quik.co.il/?product=";
 const RAMI_LEVI = "https://www.rami-levy.co.il/he/online/search?item=";
 
-export const selectors = {
+const selectors = {
   imageSelector:
     "#__nuxt #__layout #main-content > div div:last-child > div #main-content > div > div:last-child > div > div > div > div > div > img",
   categorySelector:
@@ -29,4 +29,4 @@ export const selectors = {
     "#main-product-modal___BV_modal_outer_ #main-product-modal .modal-dialog #main-product-modal___BV_modal_content_ #main-product-modal___BV_modal_body_ .inner-scroll-popup-product > div:nth-child(2) > div > div > div > div > div:nth-child(2) > div > span",
 };
 
-export { QUICK, RAMI_LEVI };
+export { QUICK, RAMI_LEVI, selectors };

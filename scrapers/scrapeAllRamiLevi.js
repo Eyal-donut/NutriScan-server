@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 import colors from "colors";
 import autoScroll from "./scrape utils/autoScroll.js";
 import { wait } from "./scrape utils/wait.js";
-import { selectors } from "./constants.js";
+import { selectors, RAMI_LEVI } from "./constants.js";
 import { createProductLocally } from "../controllers/localProductsController.js";
 
 const performScraping = async () => {
@@ -22,9 +22,7 @@ const performScraping = async () => {
 
   while (true) {
     try {
-      await page.goto(
-        `https://www.rami-levy.co.il/he/online/market/%D7%A4%D7%90%D7%A8%D7%9D-%D7%95%D7%AA%D7%99%D7%A0%D7%95%D7%A7%D7%95%D7%AA`
-      );
+      await page.goto(`${RAMI_LEVI}`);
       // await page.waitForSelector(selectors.categoryHeaderSelector);
       await page.waitForSelector(selectors.imageSelector);
 
