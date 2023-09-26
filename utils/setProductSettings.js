@@ -16,8 +16,6 @@ const checkIfFreeFromIngredient = (product, ingredientsArray) => {
   return true;
 };
 
-checkIfFreeFromIngredient({ingredients: "Dark wheat flour (gluten), water, yeast, salt, preservatives (E202 E282), emulsifiers (E471 E481), dietary fiber, pH regulator (E330), antioxidant (E300), enzymes."}, notVeganIngredients)
-
 const checkIfPalmOilFree = (product) => {
   return product.ingredients.toLowerCase().includes("palm oil")
     ? false

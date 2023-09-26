@@ -3,6 +3,7 @@ import Product from "../models/Product.js";
 import ErrorResponse from "../utils/ErrorResponse.js";
 import { translateAndEdit } from "../utils/translate product/translateApi.js";
 import { setDieAndEnvironmentSettings } from "../utils/setProductSettings.js";
+import adaptProductFromAPI from "../utils/adaptProductFromAPI.js";
 
 // @desc    Get a single product
 // @route   GET /api/v1/products-scanner/products/:barcode
@@ -39,16 +40,13 @@ export const getProducts = asyncHandler(async (req, res, next) => {
 });
 
 // Define section category here for scraping and creation of multiple products
-const sectionCat = "Organic and Health"
+const sectionCat = "Organic and Health";
 
 // @desc    Create a product
 // @route   POST /api/v1/products-scanner/products
 // @access  Public
 export const createIsraeliProduct = asyncHandler(async (req, res, next) => {
-  const translatedProduct = await translateAndEdit(
-    req.body,
-    sectionCat
-  );
+  const translatedProduct = await translateAndEdit(req.body, sectionCat);
   const editedProduct = setDieAndEnvironmentSettings(translatedProduct);
 
   const product = await Product.create(editedProduct);
@@ -60,6 +58,29 @@ export const createIsraeliProduct = asyncHandler(async (req, res, next) => {
     data: product,
   });
 });
+
+// @desc    Create a product
+// @route   POST /api/v1/products-scanner/products/openFoodFacts
+// @access  Public
+export const createFromOpenFoodSourceAPI = asyncHandler(
+  async (req, res, next) => {
+    const adaptedProduct = adaptProductFromAPI(req.body);
+
+    // translate here to english the following fields: ingredients, category, name, company. Use the same translation function you already have bra.
+    // handle nutritional values coming from the api, including translating them and converting to the wanted structure.
+
+    const editedProduct = setDieAndEnvironmentSettings(adaptedProduct);
+
+    const product = await Product.create(editedProduct);
+    if (!product) {
+      return next(new ErrorResponse("Error, product not created!"));
+    }
+    res.status(200).json({
+      success: true,
+      data: product,
+    });
+  }
+);
 
 // @desc    Create many products
 // @route   POST /api/v1/products-scanner/products/many

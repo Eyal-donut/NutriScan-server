@@ -7,6 +7,7 @@ import {
   createProducts,
   deleteProduct,
   deleteProducts,
+  createFromOpenFoodSourceAPI,
 } from "../controllers/productsController.js";
 import { protect, authorize } from "../middleware/authMiddleware.js";
 
@@ -17,6 +18,10 @@ productsRouter
   .get(getProducts)
   .post(createIsraeliProduct)
   .delete(deleteProducts);
+
+productsRouter
+  .route("/openFoodFacts")
+  .post(createFromOpenFoodSourceAPI)
 
 productsRouter.route("/many").post(createProducts);
 
