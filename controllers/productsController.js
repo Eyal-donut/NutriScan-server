@@ -38,6 +38,7 @@ export const getProducts = asyncHandler(async (req, res, next) => {
   });
 });
 
+// Define section category here for scraping and creation of multiple products
 const sectionCat = "Organic and Health"
 
 // @desc    Create a product
