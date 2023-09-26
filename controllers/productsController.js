@@ -88,20 +88,6 @@ export const createProducts = asyncHandler(async (req, res, next) => {
   });
 });
 
-// // @desc    Create many products
-// // @route   POST /api/v1/products-scanner/products/many
-// // @access  Private
-// export const createProducts = asyncHandler(async (req, res, next) => {
-//   const productsArray = await Product.insertMany(req.body);
-//   if (!productsArray) {
-//     return next(new ErrorResponse("Error, products not created!"));
-//   }
-//   res.status(200).json({
-//     success: true,
-//     data: productsArray,
-//   });
-// });
-
 // @desc    DELETE a single product
 // @route   DELETE /api/v1/products-scanner/products/:barcode
 // @access  Private
