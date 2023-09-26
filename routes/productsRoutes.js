@@ -3,7 +3,7 @@ import express from "express";
 import {
   getProduct,
   getProducts,
-  createProduct,
+  createIsraeliProduct,
   createProducts,
   deleteProduct,
   deleteProducts,
@@ -15,7 +15,7 @@ const productsRouter = express.Router();
 productsRouter
   .route("/")
   .get(getProducts)
-  .post(createProduct)
+  .post(createIsraeliProduct)
   .delete(deleteProducts);
 
 productsRouter.route("/many").post(createProducts);

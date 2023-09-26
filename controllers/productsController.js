@@ -44,7 +44,7 @@ const sectionCat = "Organic and Health"
 // @desc    Create a product
 // @route   POST /api/v1/products-scanner/products
 // @access  Public
-export const createProduct = asyncHandler(async (req, res, next) => {
+export const createIsraeliProduct = asyncHandler(async (req, res, next) => {
   const translatedProduct = await translateAndEdit(
     req.body,
     sectionCat
