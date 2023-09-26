@@ -1,7 +1,3 @@
-// const AZURE_KEY = "8355b3eb533946c4992441baec13d714";
-// const TRANSLATOR_ENDPOINT = "https://api.cognitive.microsofttranslator.com/";
-// const LOCATION = "germanywestcentral";
-
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { translateNutValues } from "./translateNutValues.js";
