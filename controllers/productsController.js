@@ -7,6 +7,7 @@ import {
 } from "../utils/translate product/translateApi.js";
 import { setDieAndEnvironmentSettings } from "../utils/setProductSettings.js";
 import adaptProductFromAPI from "../utils/adaptProductFromAPI.js";
+import { checkNutValuesFromAPI } from "../utils/checkNutValusFromAPI.js";
 
 // @desc    Get a single product
 // @route   GET /api/v1/products-scanner/products/:barcode
@@ -70,11 +71,14 @@ export const createFromOpenFoodSourceAPI = asyncHandler(
     let adaptedProduct = adaptProductFromAPI(req.body);
     const { category, name, ingredients } = adaptedProduct;
 
-    // handle nutritional values coming from the api, including translating them and converting to the wanted structure.
-
     const translatedInfo = await translateApi(category, name, ingredients);
     adaptedProduct = { ...adaptedProduct, ...translatedInfo };
     let editedProduct = setDieAndEnvironmentSettings(adaptedProduct);
+
+    // handle nutritional values coming from the api, including translating them and converting to the wanted structure.
+    editedProduct.settings.nutritionPreferences = checkNutValuesFromAPI(
+      editedProduct.product.nutriments_estimated
+    );
 
     // const product = await Product.create(adaptedProduct);
     // if (!product) {

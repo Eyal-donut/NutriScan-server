@@ -36,6 +36,7 @@ const adaptProductFromAPI = (product) => {
   if (product.product.image_url) {
     adaptedProduct.imageUrl = product.product.image_url;
   }
+  adaptedProduct.source = "OpenFoodFactsAPI"
   return adaptedProduct;
 };
 
