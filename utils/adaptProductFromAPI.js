@@ -21,6 +21,8 @@ const adaptProductFromAPI = (product) => {
       },
     },
   };
+  adaptedProduct.code = Number(product.product.code);
+  
   if (product.product.ingredients_text) {
     adaptedProduct.ingredients = product.product.ingredients_text;
   }
@@ -36,7 +38,7 @@ const adaptProductFromAPI = (product) => {
   if (product.product.image_url) {
     adaptedProduct.imageUrl = product.product.image_url;
   }
-  adaptedProduct.source = "OpenFoodFactsAPI"
+  adaptedProduct.source = "OpenFoodFactsAPI";
   return adaptedProduct;
 };
 
