@@ -1,8 +1,11 @@
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { translateNutValues } from "./translateNutValues.js";
+import dotenv from "dotenv";
 
-export const translateApi = (category, name, company, ingredients) => {
+dotenv.config({ path: "./config/config.env" });
+
+export const translateApi = (category, name, ingredients) => {
   return axios({
     baseURL: process.env.TRANSLATOR_ENDPOINT,
     url: "/translate",
@@ -20,7 +23,6 @@ export const translateApi = (category, name, company, ingredients) => {
     data: [
       { text: category },
       { text: name },
-      { text: company, translation: { context: "Name" } },
       { text: ingredients },
     ],
     responseType: "json",
@@ -30,13 +32,9 @@ export const translateApi = (category, name, company, ingredients) => {
 
       const category = data[0].translations[0].text;
       const name = data[1].translations[0].text;
-      const company = data[2].translations[0].text;
-      const ingredients = data[3].translations[0].text;
+      const ingredients = data[2].translations[0].text;
 
-      return { category, name, company, ingredients };
-    })
-    .then(function (result) {
-      return result;
+      return { category, name, ingredients };
     })
     .catch(function (error) {
       console.error(error);
@@ -96,7 +94,6 @@ export const translateAndEdit = async (product, section) => {
     const translateInfo = await translateApi(
       category,
       name,
-      company,
       ingredients
     );
 
@@ -107,4 +104,4 @@ export const translateAndEdit = async (product, section) => {
   }
 };
 
-translateApi("Erdnussbutter", "Erdnusscreme", "Billa", "Erdnusskerne geröstet 91 %, Zucker, pflanzliche Fette (Palm und Shea), Salz.")
+// console.log(await translateApi("Erdnussbutter", "Erdnusscreme", "gesalzene ednusse, palm"))

@@ -16,7 +16,7 @@ const productsRouter = express.Router();
 productsRouter
   .route("/")
   .get(getProducts)
-  .post(createIsraeliProduct)
+  // .post(createIsraeliProduct)
   .delete(deleteProducts);
 
 productsRouter

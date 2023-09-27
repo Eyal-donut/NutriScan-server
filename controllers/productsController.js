@@ -67,29 +67,22 @@ export const createIsraeliProduct = asyncHandler(async (req, res, next) => {
 // @access  Public
 export const createFromOpenFoodSourceAPI = asyncHandler(
   async (req, res, next) => {
-    const adaptedProduct = adaptProductFromAPI(req.body);
+    let adaptedProduct = adaptProductFromAPI(req.body);
+    const { category, name, ingredients } = adaptedProduct;
 
-    // translate here to english the following fields: ingredients, category, name, company. Use the same translation function you already have bra.
     // handle nutritional values coming from the api, including translating them and converting to the wanted structure.
 
+    const translatedInfo = await translateApi(category, name, ingredients);
+    adaptedProduct = { ...adaptedProduct, ...translatedInfo };
     let editedProduct = setDieAndEnvironmentSettings(adaptedProduct);
-    console.log(editedProduct, "before translation")
-    const translatedInfo = await translateApi(
-      editedProduct.category,
-      editedProduct.name,
-      editedProduct.company,
-      editedProduct.ingredients
-      );
-      editedProduct = { ...editedProduct, ...translatedInfo };
-      console.log(editedProduct, "after translation")
 
-    const product = await Product.create(editedProduct);
-    if (!product) {
-      return next(new ErrorResponse("Error, product not created!"));
-    }
+    // const product = await Product.create(adaptedProduct);
+    // if (!product) {
+    //   return next(new ErrorResponse("Error, product not created!"));
+    // }
     res.status(200).json({
       success: true,
-      data: product,
+      data: editedProduct,
     });
   }
 );

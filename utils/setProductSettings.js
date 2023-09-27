@@ -17,20 +17,20 @@ const checkIfFreeFromIngredient = (product, ingredientsArray) => {
 };
 
 const checkIfPalmOilFree = (product) => {
-  return product.ingredients.toLowerCase().includes("palm oil")
-    ? false
-    : product.ingredients.toLowerCase().includes("palm-oil")
-    ? false
-    : true;
+  return product.ingredients.toLowerCase().includes("palm") ? false : true;
 };
 
 const setDietPreferences = (product) => {
   const updated = { ...product };
-  updated.settings.dietPreferences["Gluten free"] =
-    checkIfFreeFromIngredient(updated, glutenIngredients);
+  updated.settings.dietPreferences["Gluten free"] = checkIfFreeFromIngredient(
+    updated,
+    glutenIngredients
+  );
 
-  updated.settings.dietPreferences["Lactose free"] =
-    checkIfFreeFromIngredient(updated, lactoseIngredients);
+  updated.settings.dietPreferences["Lactose free"] = checkIfFreeFromIngredient(
+    updated,
+    lactoseIngredients
+  );
 
   updated.settings.dietPreferences["Vegan"] = checkIfFreeFromIngredient(
     updated,
