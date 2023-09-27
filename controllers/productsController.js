@@ -1,7 +1,10 @@
 import asyncHandler from "../middleware/asyncHandler.js";
 import Product from "../models/Product.js";
 import ErrorResponse from "../utils/ErrorResponse.js";
-import { translateAndEdit } from "../utils/translate product/translateApi.js";
+import {
+  translateAndEdit,
+  translateApi,
+} from "../utils/translate product/translateApi.js";
 import { setDieAndEnvironmentSettings } from "../utils/setProductSettings.js";
 import adaptProductFromAPI from "../utils/adaptProductFromAPI.js";
 
@@ -69,7 +72,16 @@ export const createFromOpenFoodSourceAPI = asyncHandler(
     // translate here to english the following fields: ingredients, category, name, company. Use the same translation function you already have bra.
     // handle nutritional values coming from the api, including translating them and converting to the wanted structure.
 
-    const editedProduct = setDieAndEnvironmentSettings(adaptedProduct);
+    let editedProduct = setDieAndEnvironmentSettings(adaptedProduct);
+    console.log(editedProduct, "before translation")
+    const translatedInfo = await translateApi(
+      editedProduct.category,
+      editedProduct.name,
+      editedProduct.company,
+      editedProduct.ingredients
+      );
+      editedProduct = { ...editedProduct, ...translatedInfo };
+      console.log(editedProduct, "after translation")
 
     const product = await Product.create(editedProduct);
     if (!product) {

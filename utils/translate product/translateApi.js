@@ -106,3 +106,5 @@ export const translateAndEdit = async (product, section) => {
     console.error(error);
   }
 };
+
+translateApi("Erdnussbutter", "Erdnusscreme", "Billa", "Erdnusskerne geröstet 91 %, Zucker, pflanzliche Fette (Palm und Shea), Salz.")
