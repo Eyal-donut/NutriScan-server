@@ -5,7 +5,7 @@ const adaptProductFromAPI = (product) => {
     name: "Missing information",
     company: "Missing information",
     ingredients: "Missing information",
-    imageUrl: "Missing infromation",
+    imageUrl: "Missing information",
     section: "Missing information",
     settings: {
       environmentPreferences: {
