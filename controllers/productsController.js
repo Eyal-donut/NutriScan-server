@@ -85,10 +85,10 @@ export const createFromOpenFoodSourceAPI = asyncHandler(
         editedProduct.product.nutriments
       );
     }
-    // const product = await Product.create(adaptedProduct);
-    // if (!product) {
-    //   return next(new ErrorResponse("Error, product not created!"));
-    // }
+    const product = await Product.create(editedProduct);
+    if (!product) {
+      return next(new ErrorResponse("Error, product not created!"));
+    }
     res.status(200).json({
       success: true,
       data: editedProduct,
