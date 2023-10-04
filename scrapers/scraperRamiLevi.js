@@ -28,14 +28,12 @@ const performScraping = async (barcodeNumber) => {
     el.getAttribute("src")
   );
   const imageURL = `https://www.rami-levy.co.il${imageSrc}`;
-  console.log(imageURL);
 
   //~ Scrape ingredients
   const ingredientsText = await page.$eval(
     ingredientsSelector,
     (el) => el.innerText
   );
-  console.log(ingredientsText);
 
   //~ Scrape nutritional values
   await page.click(nutritionalValuesHeader);
@@ -44,9 +42,7 @@ const performScraping = async (barcodeNumber) => {
     nutritionalValuesTable,
     (el) => el.innerText
   );
-  console.log(nutValuesText);
 
   await browser.close();
 };
 
-performScraping(7290000060088);

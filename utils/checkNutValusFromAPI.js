@@ -1,5 +1,4 @@
 export const checkNutValuesFromAPI = (nutValuesData) => {
-  console.log(nutValuesData);
   const result = {};
   const valuesArray = [
     "carbohydrates_100g",
@@ -27,6 +26,8 @@ export const checkNutValuesFromAPI = (nutValuesData) => {
         val: nutValuesData[valuesArray[i]],
         units: valuesArray[i + 2],
       };
+    } else {
+      result[valuesArray[i + 1]] = 0;
     }
   }
   return result;

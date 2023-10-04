@@ -75,11 +75,16 @@ export const createFromOpenFoodSourceAPI = asyncHandler(
     adaptedProduct = { ...adaptedProduct, ...translatedInfo };
     let editedProduct = setDieAndEnvironmentSettings(adaptedProduct);
 
-    // handle nutritional values coming from the api, including translating them and converting to the wanted structure.
-    editedProduct.settings.nutritionPreferences = checkNutValuesFromAPI(
-      editedProduct.product.nutriments_estimated
-    );
-
+    if (editedProduct.product.nutriments_estimated) {
+      editedProduct.settings.nutritionPreferences = checkNutValuesFromAPI(
+        editedProduct.product.nutriments_estimated
+      );
+    }
+    if (editedProduct.product.nutriments) {
+      editedProduct.settings.nutritionPreferences = checkNutValuesFromAPI(
+        editedProduct.product.nutriments
+      );
+    }
     // const product = await Product.create(adaptedProduct);
     // if (!product) {
     //   return next(new ErrorResponse("Error, product not created!"));
@@ -101,11 +106,6 @@ export const createProducts = asyncHandler(async (req, res, next) => {
       const translatedProduct = await translateAndEdit(element, sectionCat);
       const editedProduct = setDieAndEnvironmentSettings(translatedProduct);
       const product = await Product.create(editedProduct);
-      // if (!product) {
-      //   console.log("Oopsi");
-      // return next(new ErrorResponse("Error, products not created!"))
-      // }
-      console.log(product);
       createdProducts.push(product);
     } catch (error) {
       console.log(`Error processing element: ${element}`, error);

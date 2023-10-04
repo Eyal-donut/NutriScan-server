@@ -15,7 +15,6 @@ const performScraping = async (barcodeNumber) => {
 
   const ingredientsText = await page.$eval(ingredientsSelector,
     (el) => el.innerText);
-  console.log(ingredientsText);
   await browser.close();
 };
 performScraping(7290002627210);

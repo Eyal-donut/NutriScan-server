@@ -149,7 +149,7 @@ const performScraping = async () => {
       }
 
       await browser.close();
-      console.log("I'm done bra".yellow.bold);
+      console.log("Done scraping".yellow.bold);
       break;
     } catch (error) {
       await page.reload({ waitUntil: ["networkidle0", "domcontentloaded"] });

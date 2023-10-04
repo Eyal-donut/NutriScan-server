@@ -103,5 +103,3 @@ export const translateAndEdit = async (product, section) => {
     console.error(error);
   }
 };
-
-// console.log(await translateApi("Erdnussbutter", "Erdnusscreme", "gesalzene ednusse, palm"))
