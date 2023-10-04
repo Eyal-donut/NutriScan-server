@@ -1,4 +1,5 @@
 const adaptProductFromAPI = (product) => {
+  console.log(product)
   const adaptedProduct = {
     ...product,
     category: "Missing information",

@@ -73,12 +73,14 @@ export const createFromOpenFoodSourceAPI = asyncHandler(
 
     const translatedInfo = await translateApi(category, name, ingredients);
     adaptedProduct = { ...adaptedProduct, ...translatedInfo };
-    const editedProduct = setDieAndEnvironmentSettings(adaptedProduct);
 
+    let editedProduct;
+    if (adaptedProduct.ingredients !== "Missing information") {
+      editedProduct = setDieAndEnvironmentSettings(adaptedProduct);
+    }
     editedProduct.settings.nutritionPreferences = checkNutValuesFromAPI(
       editedProduct.product
     );
-
     // const product = await Product.create(editedProduct);
     // if (!product) {
     //   return next(new ErrorResponse("Error, product not created!"));
