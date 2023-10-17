@@ -13,7 +13,13 @@ import errorHandler from "./middleware/errorHandler.js";
 dotenv.config({ path: "./config/config.env" });
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://nutri-scan.netlify.app",
+    methods: "GET, POST, PUT, DELETE",
+    allowedHeaders: "Content-Type, Authorization",
+  })
+);
 
 // Body parser middleware
 app.use(express.json());
