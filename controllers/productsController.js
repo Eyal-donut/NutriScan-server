@@ -29,12 +29,20 @@ export const getProduct = asyncHandler(async (req, res, next) => {
   });
 });
 
-// @desc    Get all products
+// @desc    Get many products
 // @route   GET /api/v1/products-scanner/products
 // @access Private
 export const getProducts = asyncHandler(async (req, res, next) => {
-  const products = await Product.find();
-  if (!products) {
+  const { searchTerm } = req.body;
+  const filter = {
+    $or: [
+      { name: { $in: searchTerm } },
+      { company: { $in: searchTerm } },
+      { category: { $in: searchTerm } },
+    ],
+  };
+  const products = await Product.find(filter);
+  if (products.length === 0) {
     return next(new ErrorResponse(`No products found`, 404));
   }
   res.status(200).json({
