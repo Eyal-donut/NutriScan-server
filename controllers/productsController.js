@@ -33,12 +33,12 @@ export const getProduct = asyncHandler(async (req, res, next) => {
 // @route   GET /api/v1/products-scanner/products
 // @access Private
 export const getProducts = asyncHandler(async (req, res, next) => {
-  const { searchTerm } = req.body;
+  const { searchTerm } = req.query;
   const filter = {
     $or: [
-      { name: { $in: searchTerm } },
-      { company: { $in: searchTerm } },
-      { category: { $in: searchTerm } },
+      { name: { $regex: searchTerm, $options: "i" } },
+      { company: { $regex: searchTerm, $options: "i" } },
+      { category: { $regex: searchTerm, $options: "i" } },
     ],
   };
   const products = await Product.find(filter);
