@@ -40,7 +40,10 @@ export const checkNutValuesFromAPI = (product) => {
           units: valuesArray[i + 2],
         };
       } else {
-        result[valuesArray[i + 1]] = 0;
+        result[valuesArray[i + 1]] = {
+          val: 0,
+          units: valuesArray[i + 2],
+        };
       }
     }
   }
