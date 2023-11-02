@@ -3,6 +3,33 @@ export const checkNutValuesFromAPI = (product) => {
     ? product.nutriments_estimated
     : product.nutriments;
 
+  const resultsForNoData = {
+    Carbohydrates: {
+      value: -1,
+      units: "g",
+    },
+    Cholesterol: {
+      value: -1,
+      units: "mg",
+    },
+    Fat: {
+      value: -1,
+      units: "g",
+    },
+    Sodium: {
+      value: -1,
+      units: "g",
+    },
+    "Saturated fat": {
+      value: -1,
+      units: "g",
+    },
+    Sugar: {
+      value: -1,
+      units: "g",
+    },
+  };
+
   let result = {};
   const valuesArray = [
     "carbohydrates_100g",
@@ -26,15 +53,12 @@ export const checkNutValuesFromAPI = (product) => {
   ];
 
   if (!nutValuesData) {
-    for (let i = 0; i < valuesArray.length; i += 3) {
-      result[valuesArray[i + 1]] = {
-        val: -1,
-        units: valuesArray[i + 2],
-      };
-    }
+    result = resultsForNoData;
   } else {
+    let count = 0;
     for (let i = 0; i < valuesArray.length; i += 3) {
       if (nutValuesData[valuesArray[i]] >= 0) {
+        count += 1;
         result[valuesArray[i + 1]] = {
           val: nutValuesData[valuesArray[i]],
           units: valuesArray[i + 2],
@@ -46,7 +70,9 @@ export const checkNutValuesFromAPI = (product) => {
         };
       }
     }
+    if (count === 0) {
+      result = resultsForNoData;
+    }
   }
-
   return result;
 };
